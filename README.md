@@ -1,4 +1,2 @@
-Мэссенджер для обмена сообщениями.
-По ссылке ниже можно посмотреть результат первого спринта разработки:
-https://eloquent-bunny-4276bd.netlify.app/
-На странице index.html список ссылок для навигации по созданным страницам.
+Masters & Heroes
+вертска по дизайну - https://www.figma.com/file/BamrtUMyx1HNKaTmaXI7Lh/Vintersaga-%2F-HM-%2F-Website?node-id=953%3A571
