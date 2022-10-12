@@ -1,0 +1,104 @@
+.input {
+  position: relative;
+  background: #140E13;
+  border-top: 1px solid #635C4C;
+  border-bottom: 1px solid #635C4C;
+  color: #635C4C;
+  font-size: 1.1875rem;
+  padding: 0.684em 1.05em;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  &.active {
+    border-color: #A08C5F;
+    color: #A08C5F;
+    & * {
+      border-color: #A08C5F;
+      color: #A08C5F;
+    }
+  }
+  &-border-left {
+    background-color: inherit;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    right: 100%;
+    width: 4px;
+    border-left: 1px solid #635C4C;
+    &::before {
+      content: '';
+      background-color: inherit;
+      position: absolute;
+      width: 7px;
+      height: 5px;
+      left: 2px;
+      bottom: 100%;
+      border-left: 1px solid #635C4C;
+      border-top: 1px solid #635C4C;
+      border-top-left-radius: 2px;
+      transform: skewX(-45deg);
+    }
+    &::after {
+      content: '';
+      background-color: inherit;
+      position: absolute;
+      width: 7px;
+      height: 5px;
+      left: 2px;
+      top: 100%;
+      border-left: 1px solid #635C4C;
+      border-bottom: 1px solid #635C4C;
+      border-bottom-left-radius: 2px;
+      transform: skewX(45deg);
+    }
+  }
+  &-border-right {
+    background-color: inherit;
+    position: absolute;
+    top: 5px;
+    bottom: 5px;
+    left: 100%;
+    width: 4px;
+    border-right: 1px solid #635C4C;
+    &::before {
+      content: '';
+      background-color: inherit;
+      position: absolute;
+      width: 7px;
+      height: 5px;
+      right: 2px;
+      bottom: 100%;
+      border-right: 1px solid #635C4C;
+      border-top: 1px solid #635C4C;
+      border-top-right-radius: 2px;
+      transform: skewX(45deg);
+    }
+    &::after {
+      content: '';
+      background-color: inherit;
+      position: absolute;
+      width: 7px;
+      height: 5px;
+      right: 2px;
+      top: 100%;
+      border-right: 1px solid #635C4C;
+      border-bottom: 1px solid #635C4C;
+      border-bottom-right-radius: 2px;
+      transform: skewX(-45deg);
+    }
+  }
+  & label {
+    padding-right: 3em;
+    border-right: 1px solid #635C4C;
+  }
+  & input {
+    padding-left: 1em;
+    width: 100%;
+    background-color: transparent;
+    flex: 1;
+    border: none;
+    outline: none;
+    color: #635C4C;
+    font-size: inherit;
+  }
+}

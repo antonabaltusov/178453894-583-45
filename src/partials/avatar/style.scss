@@ -1,0 +1,20 @@
+.avatar {
+  border-radius: 50%;
+  filter: drop-shadow(0px 0px 4px #FAD19E);
+  background: linear-gradient(#E3C668, #6E4020);
+  position: relative;
+  text-decoration: none;
+  &:hover {
+    cursor: pointer;
+    background: linear-gradient(#FFEEB8, #FFBB0A);
+  }
+  & img {
+    object-fit: cover;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 50%;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+  }
+}

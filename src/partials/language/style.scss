@@ -1,0 +1,16 @@
+.language {
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+  color: #ffc734;
+  font-size: 1em;
+  line-height: 88.6%;
+  background-color: transparent;
+  & svg {
+    margin-right: 0.5em;
+  }
+  &:hover {
+    cursor: pointer;
+    color: #ffe6a1;
+  }
+}

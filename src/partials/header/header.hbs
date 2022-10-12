@@ -1,0 +1,18 @@
+<header class="header">
+  <div class="container">
+    <div class="header-item">
+      <img class="header-logo" src="../../assets/img/Logo_fullcolor1.svg" alt="логотип">
+      {{> "header-nav/header-nav" }}
+    </div>
+    <div class="header-item">
+      {{> "language/language" text="ru"}}
+      {{#if auth }}
+      {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png"}}
+      {{> "money/money" count="9999"}}
+      {{> "notifications/notifications" }}
+      {{else}}
+      {{> "button-singin/button-singin" text="войти"}}
+      {{/if}}
+    </div>
+  </div>
+</header>

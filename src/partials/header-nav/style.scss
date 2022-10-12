@@ -1,0 +1,14 @@
+.header-nav {
+  text-transform: uppercase;
+  & .link {
+    color: #f5e3cc;
+    font-size: 1.25em;
+    line-height: 103.6%;
+    &:hover {
+      color: #FFC734;
+    }
+  }
+  & .link:not(:last-child) {
+    margin-right: 1.25em;
+  }
+}

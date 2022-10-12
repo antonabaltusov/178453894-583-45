@@ -1,0 +1,29 @@
+main.news {
+  background: #0e0e12;
+  background-image: url(../../assets/img/news/bg.png);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  padding-bottom: 19.375rem;
+  & h1 {
+    display: block;
+    width: fit-content;
+    font-weight: 700;
+    font-size: 4.375em;
+    line-height: 105.6%;
+    text-transform: uppercase;
+    color: #f5e3cc;
+    text-align: center;
+    margin: 1.0867em auto 1.4628em;
+    padding-bottom: 0.6em;
+    position: relative;
+    &::after {
+      content: url(../../assets/img/news/tittle.svg);
+      position: absolute;
+      top: 100%;
+      transform: translateX(-50%);
+      left: 50%;
+      width: 127.8%;
+      height: auto;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.footer-nav {
+  & .link {
+    font-size: 1.25em;
+    line-height: 168.5%;
+  }
+  & .link:not(:last-child) {
+    margin-right: 2.75em;
+  }
+}

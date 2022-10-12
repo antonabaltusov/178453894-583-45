@@ -1,0 +1,11 @@
+.notifications {
+    &:hover {
+      cursor: pointer;
+      & stop {
+        stop-color: #FFF2C9;
+      }
+      & stop[offset="1"] {
+        stop-color: #FFB800
+      }
+    }
+}

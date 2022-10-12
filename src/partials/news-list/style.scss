@@ -1,0 +1,7 @@
+.news-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 1.25em;
+  row-gap: 3.8em;
+}

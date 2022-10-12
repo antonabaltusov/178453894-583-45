@@ -1,0 +1,35 @@
+.header {
+  background-color: black;
+  height: 6.0625rem;
+  display: flex;
+  align-items: center;
+  &-logo {
+    height: 100%;
+    width: auto;
+  }
+  & .container {
+    height: 93.814%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &-item {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  & .button-singin {
+    margin-left: 4.125em + 0.6875em;
+  }
+  & .header-nav {
+    margin: 0 4.125em;
+  }
+  & .avatar {
+    height: 3em;
+    width: 3em;
+    margin: 0 0.6875em 0 2em;
+  }
+  .notifications {
+    margin-left: 4.125em
+  }
+}

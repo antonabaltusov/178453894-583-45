@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "### Откройте pull request в ветку main из ветки, где вы разрабатывали проект, и добавьте ссылку на этот pr в README.md в ветке main.  ### ВАЖНО: pull request должен называться “Sprint i” (i — номер спринта).",
   "scripts": {
-    "dev": "parcel src/pages/index.hbs --no-cache",
-    "prod": "parcel build src/pages/index.hbs",
-    "start": "parcel build src/pages/index.hbs && node ./server.js",
+    "dev": "parcel src/pages/index/index.hbs --no-cache",
+    "prod": "parcel build src/pages/index/index.hbs",
+    "start": "parcel build src/pages/index/index.hbs && node ./server.js",
     "test": ".github/workflows/tests.yml"
   },
   "engines": {
@@ -27,9 +27,13 @@
     "@parcel/transformer-sass": "2.7.0",
     "autoprefixer": "10.4.9",
     "parcel": "2.7.0",
-    "postcss": "8.4.16",
+    "postcss": "^8.4.17",
+    "postcss-css-variables": "^0.18.0",
     "postcss-import": "15.0.0",
-    "postcss-nested": "5.0.6"
+    "postcss-math": "0.0.10",
+    "postcss-mixins": "^9.0.4",
+    "postcss-nested": "5.0.6",
+    "postcss-simple-vars": "^7.0.0"
   },
   "dependencies": {
     "express": "4.18.1"
