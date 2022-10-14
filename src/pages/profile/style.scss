@@ -127,10 +127,10 @@
       }
       &__list {
         margin-top: 1.6em;
-        &[data-type="in"] .history-balance__item:not(.plus) {
+        &[data-type="in"] .history-balance__item:not([data-type="in"]) {
           display: none;
         }
-        &[data-type="out"] .history-balance__item.plus {
+        &[data-type="out"] .history-balance__item:not([data-type="out"]) {
           display: none;
         }
       }
