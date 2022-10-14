@@ -71,13 +71,13 @@ auth: 'true'
         <div class="history-balance">
           <div class="history-balance__name-block">
             <h2>История платежей</h2>
-            <div class="history-balance__nav">
+            <div class="history-balance__nav select-switcher">
               <button id="all" class="active">Все</button>
               <button id="in" >Входящие</button>
               <button id="out" >Исходящие</button>
             </div>
           </div>
-          <div class="history-balance__list">
+          <div class="history-balance__list select-list">
             {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="9999" desription="вывод на карту ***4578"}}
             {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="106" plus="true" desription="Награда за победу в турнире Железного Молота."}}
             {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="2060" desription="вывод на карту ***4578"}}

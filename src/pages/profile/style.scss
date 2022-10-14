@@ -44,9 +44,10 @@
         font-weight: 700;
         font-size: 1.375em;
         line-height: 88.6%;
-        color: #635C4C;
-        &.active, &:hover {
-          color: #FFC734;
+        color: #635c4c;
+        &.active,
+        &:hover {
+          color: #ffc734;
           &::after {
             content: url(../../assets/img/profile/active-switch.svg);
             position: absolute;
@@ -61,10 +62,10 @@
       font-weight: 500;
       font-size: 1.375em;
       line-height: 88.6%;
-      color: #635C4C;
+      color: #635c4c;
       &__name {
         margin: 0.15em 0;
-        color: #F5E3CC;
+        color: #f5e3cc;
         font-weight: 700;
         font-size: 1.18em;
         line-height: 105.6%;
@@ -95,7 +96,7 @@
       padding-top: 1.875em;
       display: flex;
     }
-    &-balance .flex-1{
+    &-balance .flex-1 {
       padding-top: 1.5em;
     }
     & .history-balance {
@@ -113,23 +114,23 @@
           font-weight: 700;
           font-size: 1.375em;
           line-height: 88.6%;
-          color: #635C4C;
+          color: #635c4c;
           font-family: inherit;
           &:not(:last-child) {
             margin-right: 0.88em;
           }
-          &.active, &:hover {
-            color: #FFC734;
+          &.active,
+          &:hover {
+            color: #ffc734;
           }
-
         }
       }
       &__list {
         margin-top: 1.6em;
-        &.plus .history-balance__item:not(.plus) {
+        &[data-type="in"] .history-balance__item:not(.plus) {
           display: none;
         }
-        &.minus .history-balance__item.plus {
+        &[data-type="out"] .history-balance__item.plus {
           display: none;
         }
       }
@@ -138,7 +139,7 @@
       font-weight: 700;
       font-size: 1.625em;
       line-height: 88.6%;
-      color: #F5E3CC;
+      color: #f5e3cc;
     }
     &-input-block {
       margin-top: 1.5em;
@@ -168,7 +169,7 @@
           top: 0;
           width: 100%;
           height: 100%;
-          filter: drop-shadow(0 0 10px #A23C1B);
+          filter: drop-shadow(0 0 10px #a23c1b);
         }
         &__content {
           display: flex;
@@ -179,7 +180,7 @@
           top: 38%;
           transform: translateX(-50%);
           left: 50%;
-          color: #F5E3CC;
+          color: #f5e3cc;
           line-height: 103.6%;
           text-shadow: 0px -2px 11px #000000, 0px 5px 6px #000000;
         }
@@ -193,14 +194,13 @@
           font-size: 0.6875rem;
           margin-bottom: 1em;
         }
-
       }
       & .money {
         margin-top: 1.3em;
         font-size: 1.375em;
         line-height: 103.6%;
         text-transform: uppercase;
-        color: #F5E3CC;
+        color: #f5e3cc;
         text-shadow: 0px -2px 11px #000000, 0px 5px 6px #000000;
         display: flex;
         flex-direction: column;
@@ -211,7 +211,7 @@
         }
       }
     }
-    
+
     & .input {
       width: 49.5%;
       height: fit-content;
@@ -219,7 +219,7 @@
     &-text {
       font-size: 1.125em;
       line-height: 130%;
-      color: #F5E3CC;
+      color: #f5e3cc;
       width: 43.5%;
       margin-left: 7%;
     }

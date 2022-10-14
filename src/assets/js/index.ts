@@ -1,8 +1,10 @@
-import focusBlur from './focusBlur'
-import balanceHistory from './balanceHistory'
-import './polifils'
+import focusBlur from "./focusBlur";
+import swither from "./swither";
+import search from "./search";
+import "./polifils";
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
   focusBlur();
-  balanceHistory();
-})
+  swither();
+  search();
+});

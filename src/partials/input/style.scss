@@ -1,31 +1,31 @@
 .input {
   position: relative;
-  background: #140E13;
-  border-top: 1px solid #635C4C;
-  border-bottom: 1px solid #635C4C;
-  color: #635C4C;
+  background: #140e13;
+  border-top: 1px solid #635c4c;
+  border-bottom: 1px solid #635c4c;
+  color: #635c4c;
   & input::-webkit-input-placeholder {
-    color: #635C4C;
+    color: #635c4c;
   }
   & input::-moz-placeholder {
-    color: #635C4C;
+    color: #635c4c;
   }
   font-size: 1.1875rem;
   padding: 0.65em 1.05em;
   border-radius: 0.2em;
   display: flex;
   align-items: center;
-  &::before, &::after {
-    content: '';
+  &::before,
+  &::after {
+    content: "";
     position: absolute;
-    background-color: #140E13;
+    background-color: #140e13;
     top: 0;
     bottom: 0;
     width: 0.5em;
     border-radius: 0.2em;
     padding: 0;
     z-index: 10;
-
   }
   &::before {
     left: 0;
@@ -67,7 +67,7 @@
   }
   & label {
     padding-right: 3em;
-    border-right: 1px solid #635C4C;
+    border-right: 1px solid #635c4c;
   }
   & input {
     padding-left: 1em;
@@ -76,25 +76,28 @@
     flex: 1;
     border: none;
     outline: none;
-    color: #635C4C;
+    color: #635c4c;
     font-size: inherit;
     height: 100%;
   }
   &.active {
-    border-color: #A08C5F;
-    color: #A08C5F;
+    border-color: #a08c5f;
+    color: #a08c5f;
+    & label {
+      border-color: #a08c5f;
+    }
     & input {
-      color: #A08C5F;
+      color: #a08c5f;
     }
     & :not(.button-singin) * {
-      border-color: #A08C5F;
-      color: #A08C5F;
+      border-color: #a08c5f;
+      color: #a08c5f;
     }
     & input::-webkit-input-placeholder {
-      color: #A08C5F;
+      color: #a08c5f;
     }
     & input::-moz-placeholder {
-      color: #A08C5F;
+      color: #a08c5f;
     }
   }
 }

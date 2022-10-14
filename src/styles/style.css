@@ -6,6 +6,8 @@
 @import '../pages/news/style.scss';
 @import '../pages/article/style.scss';
 @import '../pages/profile/style.scss';
+@import '../pages/shop/style.scss';
+@import '../pages/index/style.scss';
 @import '../partials/input/style.scss';
 @import '../partials/input-balance/style.scss';
 @import '../partials/link/style.scss';
@@ -21,3 +23,4 @@
 @import '../partials/news-list/style.scss';
 @import '../partials/news-item/style.scss';
 @import '../partials/balance-item/style.scss';
+@import '../partials/product/style.scss';

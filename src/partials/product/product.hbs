@@ -1,0 +1,12 @@
+<div  class="product" data-type="{{type}}">
+  <div class="product-img img-wrapper">
+    <picture>
+      <img src="{{imgSrc}}" alt="{{title}}" />
+    </picture>
+  </div>
+  <div class="product-info">
+    <h2>{{title}}</h2>
+    {{> "money/money" count=summ }}
+    {{> "button-singin/button-singin" text="Купить" }}
+  </div>
+</div>
