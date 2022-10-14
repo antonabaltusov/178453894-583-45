@@ -5,7 +5,9 @@
 @import './general.scss';
 @import '../pages/news/style.scss';
 @import '../pages/article/style.scss';
+@import '../pages/profile/style.scss';
 @import '../partials/input/style.scss';
+@import '../partials/input-balance/style.scss';
 @import '../partials/link/style.scss';
 @import '../partials/language/style.scss';
 @import '../partials/avatar/style.scss';
@@ -18,3 +20,4 @@
 @import '../partials/footer-nav/style.scss';
 @import '../partials/news-list/style.scss';
 @import '../partials/news-item/style.scss';
+@import '../partials/balance-item/style.scss';

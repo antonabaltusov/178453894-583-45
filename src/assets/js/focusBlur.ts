@@ -6,8 +6,6 @@ export default function focusBlur() {
       if(wrapper) {
         wrapper.classList.add('active');
       }
-      console.log('focus');
-      
     })
     input.addEventListener('blur', (e) => {
       const input = e.target as HTMLInputElement;
@@ -15,7 +13,6 @@ export default function focusBlur() {
       if(wrapper) {
         wrapper.classList.remove('active');
       }
-       console.log('blur');
     })
   })
 }

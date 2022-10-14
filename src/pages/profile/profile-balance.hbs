@@ -1,0 +1,91 @@
+---
+auth: 'true'
+---
+
+{{!< body }}
+<main class="bg-common profile">
+  <div class="container">
+    <div class="profile__head">
+      <svg class="profile__head-border" width="1293" height="9" viewBox="0 0 1293 9" fill="none" preserveAspectRatio="none"  xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M1279.29 5.73962L14.1435 5.73959V3.61459L1279.29 3.61462V5.73962Z" fill="#635C4C"/>
+        <path d="M12 8.92709L0.798828 4.46352L12 -4.57764e-05L16.33 4.46352L12 8.92709Z" fill="#635C4C"/>
+        <path d="M1281.8 8.92712L1293 4.46356L1281.8 -1.62125e-05L1277.47 4.46356L1281.8 8.92712Z" fill="#635C4C"/>
+      </svg>
+      <div class="profile__avatar">
+        {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png" disabled="true"}}
+      </div>
+      <div class="flex-1">
+        <div class="user-info">
+          <h1>Личный кабинет</h1>
+          <div class="user-info__name">
+            <p>Mellosa morgenstern</p>
+            <button>
+              <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8.64576 2.83988L0.942759 10.5515C0.904005 10.5904 0.876023 10.6396 0.862697 10.6924L0.00889326 14.1229C-0.0166465 14.2262 0.0136681 14.336 0.0889547 14.4114C0.145919 14.4684 0.223538 14.5 0.302933 14.5C0.327251 14.5 0.352125 14.497 0.376332 14.4909L3.80332 13.6361C3.85673 13.6227 3.90526 13.5948 3.94401 13.556L11.6477 5.84495L8.64576 2.83988Z" fill="#635C4C"/>
+                <path d="M13.5561 1.78843L12.6986 0.93006C12.1255 0.356369 11.1267 0.356925 10.5542 0.93006L9.5039 1.98151L12.5057 4.98647L13.5561 3.93502C13.8423 3.64856 14 3.26729 14 2.86178C14 2.45627 13.8423 2.075 13.5561 1.78843Z" fill="#635C4C"/>
+              </svg>
+            </button>
+          </div>
+          <div class="user-info__id"><p><span>id</span> 1364622</p></div>
+        </div>
+        <div class="switch-block">
+          <a class="switch-block__button" href="../profile/profile.hbs">Общее</a>
+          <a class="switch-block__button active" href="../profile/profile-balance.hbs">Баланс</a>
+        </div>
+      </div>
+    </div>
+    <div class="profile__general profile__general-balance">
+       <div class="profile__avatar">
+        <div class="level-block">
+          <svg width="81" height="128" viewBox="0 0 81 128" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.5 1.5H79.5V108.531L40.0077 126.351L1.5 108.541V1.5Z" fill="url(#paint0_linear_732_150)" stroke="url(#paint1_linear_732_150)" stroke-width="3"/>
+            <defs>
+            <linearGradient id="paint0_linear_732_150" x1="40.5" y1="0" x2="40.5" y2="128" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#3D5A65"/>
+            <stop offset="1" stop-color="#010202"/>
+            </linearGradient>
+            <linearGradient id="paint1_linear_732_150" x1="40.5" y1="0" x2="40.5" y2="128" gradientUnits="userSpaceOnUse">
+            <stop stop-color="#E3C668"/>
+            <stop offset="1" stop-color="#6E4020"/>
+            </linearGradient>
+            </defs>
+          </svg>
+          <div class="level-block__content">
+            <span>Уровень</span>
+            <p>
+              11
+            </p>
+          </div>
+        </div>
+         {{> "money/money" count="9999"}}
+      </div>
+      <div class="flex-1">
+        <h2>Вывод средств</h2>
+        <div class="profile__general-input-block">
+          {{> "input-balance/input-balance" label="Вывести" placeholder="Сумма от 500 до 15 000"}}
+          <div class="profile__general-text">
+            <p>Произведенные платежи и текущий баланс средств
+  на счету вашей учетной записи Vintersaga</p>
+          </div>
+        </div>
+        <div class="history-balance">
+          <div class="history-balance__name-block">
+            <h2>История платежей</h2>
+            <div class="history-balance__nav">
+              <button id="all" class="active">Все</button>
+              <button id="in" >Входящие</button>
+              <button id="out" >Исходящие</button>
+            </div>
+          </div>
+          <div class="history-balance__list">
+            {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="9999" desription="вывод на карту ***4578"}}
+            {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="106" plus="true" desription="Награда за победу в турнире Железного Молота."}}
+            {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="2060" desription="вывод на карту ***4578"}}
+            {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="1520" plus="true" desription='Бонус "Приведи друга" за достижения пользователя ID 1987289: произведено 60 кусков кожи'}}
+            {{> "balance-item/balance-item" itemDate="12 . 02 . 22" summ="1000" desription="вывод на карту ***4578"}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

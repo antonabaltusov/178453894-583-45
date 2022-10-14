@@ -1,3 +1,3 @@
-<a href="../../pages/profile/profile.hbs" class="avatar">
+<a {{#if disabled}}{{else}}href="../../pages/profile/profile.hbs"{{/if}} class="avatar {{#if disabled}}disabled{{/if}}">
   <img src="{{imgSrc}}" alt="Аватар" />
 </a>
