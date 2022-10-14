@@ -1,16 +1,11 @@
 .input-balance {
   padding: 0.3rem 0 0.3rem 1em;
+  &.active input{
+
+  }
   & input {
     padding-right: 1rem;
     padding-left: 0;
-    width: 100%;
-    background-color: transparent;
-    flex: 1;
-    border: none;
-    outline: none;
-    color: #635C4C;
-    font-size: inherit;
-    height: 100%;
   }
   & .button-singin {
     background-color: #FFC734;
