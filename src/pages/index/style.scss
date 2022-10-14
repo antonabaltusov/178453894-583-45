@@ -40,6 +40,21 @@
     }
     &-main {
       margin-top: 20px;
+      & > a {
+        display: block;
+        text-decoration: none;
+        margin-bottom: 1em;
+        font-weight: 700;
+        font-size: 1.5625em;
+        line-height: 88.6%;
+        text-align: right;
+        text-transform: uppercase;
+        color: #ffc734;
+        &:hover {
+          cursor: pointer;
+          color: #ffe6a1;
+        }
+      }
     }
   }
   &-title {
