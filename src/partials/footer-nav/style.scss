@@ -6,4 +6,21 @@
   & .link:not(:last-child) {
     margin-right: 2.75em;
   }
+  & .copyright {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    & > *:nth-child(2n){
+      text-align: right;
+    }
+    & .link:not(:last-child) {
+      margin-right: 0;
+    }
+    & .copyright {
+      display: inline;
+    }
+  }
 }
