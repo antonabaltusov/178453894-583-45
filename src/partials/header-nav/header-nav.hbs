@@ -4,4 +4,7 @@
   {{> "link/link" text="События" link=""}}
   {{> "link/link" text="Новости" link="../../pages/news/news.hbs"}}
   {{> "link/link" text="Поддержка" link=""}}
+  {{#if auth }}
+    {{> "notifications/notifications" }}
+  {{/if}}
 </div>

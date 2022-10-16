@@ -9,6 +9,13 @@
     }
   }
   & .link:not(:last-child) {
-    margin-right: 1.25em;
+    margin-right: 1.3vw;
+  }
+  
+  & .notifications {
+    display: none;
+    @media (max-width: 810px) {
+      display: block;
+    }
   }
 }
