@@ -7,7 +7,7 @@
   font-size: 1em;
   font-weight: 700;
   padding: 0.6875em 0.3em;
-  margin: 0 0.6875em;
+  margin: 0 5px;
   box-shadow: 0px 0px 8px #ff7b0078;
   &:hover {
     cursor: pointer;
@@ -29,20 +29,21 @@
     box-shadow: 0px 0px 8px #ff7b0078;
     border-color: #ffc734;
   }
-  & .shot-raund-radius {
-    &-border-left,
-    &-border-right {
-      width: 0.6875em;
-      top: 0.6875em;
-      bottom: 0.6875em;
-    }
-  }
+  // & .shot-raund-radius {
+  //   &-border-left,
+  //   &-border-right {
+  //     width: 0.6875em;
+  //     top: 0.6875em;
+  //     bottom: 0.6875em;
+  //   }
+  // }
   &__text {
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 15;
     background-color: inherit;
     display: flex;
     align-items: center;

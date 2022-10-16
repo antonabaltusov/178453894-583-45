@@ -31,22 +31,21 @@
     margin: 0 0.3em;
     line-height: 88.6%;
     text-transform: none;
-    border-radius: 0.15em;
     z-index: 15;
-    & .shot-raund-radius {
-      &-border-left,
-      &-border-right {
-        width: 0.3em;
-        top: 0.3em;
-        bottom: 0.3em;
-      }
-      &-border-right {
-        &::before,
-        &::after {
-          right: -1px;
-        }
-      }
-    }
+    // & .shot-raund-radius {
+    //   &-border-left,
+    //   &-border-right {
+    //     width: 0.3em;
+    //     top: 0.3em;
+    //     bottom: 0.3em;
+    //   }
+    //   &-border-right {
+    //     &::before,
+    //     &::after {
+    //       right: -1px;
+    //     }
+    //   }
+    // }
     & * {
       background-color: #FFC734;
     }
