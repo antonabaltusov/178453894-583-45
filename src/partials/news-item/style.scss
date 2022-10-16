@@ -8,8 +8,109 @@
     }
   }
   & .img-wrapper {
-    width: 100%;
-    padding-bottom: 56%;
+    width: 414px;
+    height: 234px;
+    background-size: 0;
+  }
+  & .news-img {
+    &__center {
+      position: absolute;
+      background-image: inherit;
+      height: 100%;
+      top: 0;
+      left: 30px;
+      right: 30px;
+      background-size: 414px 234px;
+      background-position: center;
+      z-index: 11;
+    }
+    &__left,
+    &__right {
+      position: absolute;
+      background-image: inherit;
+      background-size: 414px 234px;
+      top: 30px;
+      bottom: 30px;
+      width: 35px;
+      z-index: 5;
+      &-top, 
+      &-bottom {
+        position: absolute;
+        width: calc(31px * 1.41421356237);
+        height: calc(31px * 1.41421356237);
+        transform: rotate(45deg);
+        background-image: inherit;
+        background-size: 0;
+        overflow: hidden;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-image: inherit;
+          background-size: 414px 234px;
+          transform: rotate(-45deg);
+        }
+      }
+      &-top {
+        bottom: 0;
+      }
+      &-bottom {
+        top: 0;
+      }
+    }
+    &__left {
+      left: 0;
+      background-position: left center;
+      &-top, 
+      &-bottom {
+        left: 0;
+      }
+      &-top::after {
+        background-position: left bottom;
+      }
+      &-bottom::after {
+        background-position: left top;
+      }
+    }
+    &__right {
+      right: 0;
+      background-position: right center;
+      &-top, 
+      &-bottom {
+        right: 0;
+      }
+      &-top::after {
+        background-position: right bottom;
+      }
+      &-bottom::after {
+        background-position: right top;
+      }
+    }
+  }
+  @media (max-width: 450px) {
+    & .img-wrapper {
+      width: 348px;
+      height: 144px;
+      background-size: 0;
+    }
+    & .news-img {
+      &__center {
+        background-size: 348px 144px;
+      }
+      &__left,
+      &__right {
+        background-size: 348px 144px;
+        &-top, 
+        &-bottom {
+          &::after {
+            background-size: 348px 144px;
+          }
+        }
+      }
+    }
   }
   & h2 {
     max-width: 100%;
