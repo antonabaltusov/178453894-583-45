@@ -1,11 +1,12 @@
 .notifications {
+  display: block !important;
+  visibility: visible;
+  width: 19px;
+  height: 20px;
+  background-image: url(../../assets/img/notifications.svg);
+  background-size: contain;
     &:hover {
       cursor: pointer;
-      & stop {
-        stop-color: #FFF2C9;
-      }
-      & stop[offset="1"] {
-        stop-color: #FFB800
-      }
+      background-image: url(../../assets/img/notifications-hover.svg);
     }
 }

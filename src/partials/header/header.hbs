@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="container">
+  <div class="container desktop-menu">
     <div class="header-item">
       <a href="/">
         <img class="header-logo" src="../../assets/img/Logo_fullcolor1.svg" alt="логотип">
@@ -15,6 +15,45 @@
       {{else}}
       {{> "button-singin/button-singin" text="войти" link="../../pages/profile/profile.hbs"}}
       {{/if}}
+    </div>
+  </div>
+  <div class="container mobile-menu">
+    <div class="header-item">
+      <a href="/">
+        <img class="header-logo" src="../../assets/img/Logo_fullcolor1.svg" alt="логотип">
+      </a>
+    </div>
+    <div class="header-item">
+      <button class="btn-open-menu">
+        <svg width="22" height="15" viewBox="0 0 22 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.89339 1.26342C5.89339 0.707114 6.36696 0.256104 6.95108 0.256104H20.701C21.2851 0.256104 21.7586 0.707114 21.7586 1.26342C21.7586 1.81973 21.2851 2.27074 20.701 2.27074H6.95108C6.36696 2.27074 5.89339 1.81969 5.89339 1.26342ZM20.701 6.3H1.66266C1.07854 6.3 0.60498 6.75105 0.60498 7.30732C0.60498 7.86363 1.07854 8.31464 1.66266 8.31464H20.701C21.2851 8.31464 21.7586 7.86363 21.7586 7.30732C21.7586 6.75105 21.2851 6.3 20.701 6.3ZM20.701 12.3439H11.1818C10.5977 12.3439 10.1241 12.7949 10.1241 13.3512C10.1241 13.9075 10.5977 14.3585 11.1818 14.3585H20.701C21.2851 14.3585 21.7586 13.9075 21.7586 13.3512C21.7586 12.7949 21.2851 12.3439 20.701 12.3439Z" fill="#EAC599"/>
+        </svg>
+      </button>
+      <button class="btn-close-menu">
+        <svg width="16" height="17" viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M14.0133 1.15132L0.55122 14.6134C0.138183 15.0265 0.122266 15.6803 0.515606 16.0736C0.908974 16.467 1.56274 16.451 1.97578 16.038L15.4379 2.57588C15.8509 2.16284 15.8669 1.50907 15.4735 1.1157C15.0802 0.722363 14.4264 0.738281 14.0133 1.15132Z" fill="#FFC734"/>
+          <path d="M1.97589 1.15132L15.438 14.6134C15.851 15.0265 15.867 15.6803 15.4736 16.0736C15.0802 16.467 14.4265 16.451 14.0134 16.038L0.551333 2.57588C0.138296 2.16284 0.12235 1.50907 0.515718 1.1157C0.909058 0.722363 1.56286 0.738281 1.97589 1.15132Z" fill="#FFC734"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="mobile-menu-main">
+    <div>
+      {{#if auth }}
+        {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png"}}
+        <div class="user-info">
+          <div class="user-info__name">
+            <p>Mellosa<br>morgenstern</p>
+          </div>
+          <div class="user-info__id"><p><span>id</span> 1364622</p></div>
+        </div>
+      {{else}}
+        {{> "button-singin/button-singin" text="войти" link="../../pages/profile/profile.hbs"}}
+      {{/if}}
+    </div>
+    <div>
+      {{> "header-nav/header-nav" }}
+      
     </div>
   </div>
 </header>

@@ -153,6 +153,7 @@
     background-position: center;
     &-border {
       position: absolute;
+      z-index: 6;
       top: 100%;
       height: auto;
       width: 100%;

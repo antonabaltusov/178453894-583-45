@@ -3,6 +3,11 @@
   height: 6.0625rem;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 500;
+  @media (max-width: 1000px) {
+    font-size: 12px;
+  }
   &-logo {
     height: 100%;
     width: auto;
@@ -18,11 +23,11 @@
     display: flex;
     align-items: center;
   }
-  & .button-singin {
-    margin-left: 4.125em + 0.6875em;
+  & .shot-raund-radius__wrapper {
+    margin-left: 3vw;
   }
   & .header-nav {
-    margin: 0 4.125em;
+    margin: 0 3.4375vw;
   }
   & .avatar {
     height: 3em;
@@ -30,6 +35,108 @@
     margin: 0 0.6875em 0 2em;
   }
   .notifications {
-    margin-left: 4.125em
+    margin-left: 3vw;
+  }
+  & .mobile-menu {
+    display: none;
+    padding: 0 13px 0 20px;
+
+    & .btn-close-menu,
+    & .btn-open-menu {
+      border: none;
+      background-color: transparent;
+      height: 14px;
+      &:focus {
+        outline: none;
+      }
+    }
+    & .btn-close-menu {
+      height: 15.5px;
+      display: none;
+    }
+    &-main {
+      transform: translateX(100%);
+      opacity: 0;
+      transition: 0.3s;
+      position: fixed;
+      width: 100vw;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      background-color: black;
+      z-index: 400;
+      padding: 127px 13.589744vw 10px 7.435897vw;
+      display: flex;
+      justify-content: space-between;
+      & .header-nav {
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        & .link {
+          font-size: 22px;
+          margin-right: 0;
+          margin-bottom: 34px;
+        }
+      }
+      & .avatar {
+        width: 109px;
+        height: 109px;
+        display: block;
+        margin-left: 0;
+        margin-right: auto;
+      }
+      & .user-info {
+        font-size: 16px;
+        &__name {
+          font-weight: 700;
+          line-height: 105.6%;
+          text-transform: uppercase;
+          color: #F5E3CC;
+          margin-top: 1.25em;
+        }
+        &__id {
+          margin-top: 6px;
+          font-weight: 500;
+          line-height: 88.6%;
+          color: #635C4C;
+          & span {
+            text-transform: uppercase;
+          }
+        }
+      }
+      
+    }
+  }
+  @media (max-width: 810px) {
+    background-color: transparent;
+    height: 100px;
+    padding-top: 17px;
+    margin-bottom: -100px;
+    & .desktop-menu {
+      display: none;
+    }
+    & .mobile-menu {
+      display: flex;
+      position: relative;
+      z-index: 800;
+    }
+  }
+  &.open-mobile-menu {
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    
+   
+    & .btn-open-menu {
+      display: none;
+    }
+    & .btn-close-menu {
+      display: block;
+    }
+    & .mobile-menu-main {
+      transform: translateX(0);
+      opacity: 1;
+    }
   }
 }

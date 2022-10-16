@@ -5,6 +5,8 @@
   {{> "link/link" text="Новости" link="../../pages/news/news.hbs"}}
   {{> "link/link" text="Поддержка" link=""}}
   {{#if auth }}
+  <div class="header-nav__notifications">
     {{> "notifications/notifications" }}
+  </div>
   {{/if}}
 </div>
