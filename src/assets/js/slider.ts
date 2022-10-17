@@ -1,4 +1,4 @@
-import Swiper,  { Navigation } from "swiper";
+import Swiper,  { Navigation } from "../../../node_modules/swiper";
 
 
 export default function slider() {
