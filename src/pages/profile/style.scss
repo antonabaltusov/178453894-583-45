@@ -163,6 +163,9 @@
         position: relative;
         max-width: 81px;
         padding-bottom: 120%;
+        &.without-level {
+          margin-bottom: 4.25em;
+        }
         & svg {
           position: absolute;
           left: 0;
@@ -183,6 +186,15 @@
           color: #f5e3cc;
           line-height: 103.6%;
           text-shadow: 0px -2px 11px #000000, 0px 5px 6px #000000;
+          & .money img {
+            width: 28px;
+            height: 26px;
+          }
+          &.without-level {
+            & .money {
+              margin-top: 0.2em;
+            }
+          }
         }
         & p {
           font-weight: 700;
