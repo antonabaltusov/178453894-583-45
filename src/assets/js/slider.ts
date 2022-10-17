@@ -1,4 +1,4 @@
-import Swiper,  { Navigation } from "../../../node_modules/swiper";
+import Swiper from "./swiper/swiper-bundle.min.js";
 
 
 export default function slider() {
@@ -9,7 +9,6 @@ export default function slider() {
   if (slider) {
     swiper = new Swiper(slider, {
       // configure Swiper to use modules
-      modules: [Navigation],
       speed: 800,
       touchRatio: 2,
       slidesPerView: "auto",
