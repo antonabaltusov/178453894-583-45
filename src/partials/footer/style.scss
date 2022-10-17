@@ -1,5 +1,6 @@
 .footer {
   padding: 1.8125em 0 2.5em;
+  margin-top: -90px;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 53.84%);
   font-size: calc(9.6px + (8.1 * ((100vw - 390px) / 1920)));
   @media (max-width: 450px) {

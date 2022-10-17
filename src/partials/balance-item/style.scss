@@ -5,6 +5,7 @@
   font-size: 18px;
   line-height: 130%;
   align-content: center;
+ 
   &:not(:last-child) {
     margin-bottom: 0.8em;
   }
@@ -38,5 +39,20 @@
   }
   & .desription {
     color: #f5e3cc;
+  }
+  @media (max-width: 810px) {
+    display: flex;
+    flex-direction: column;
+    &:not(:last-child) {
+      margin-bottom: 0;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #38372A;
+    }
+    &:not(:first-child) {
+      padding-top: 8px;
+    }
+    & .desription {
+      margin-top: 1px;
+    }
   }
 }

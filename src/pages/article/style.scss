@@ -2,7 +2,7 @@
 
 .article {
   padding-top: 3.5em;
-  padding-bottom: 4.895833vw;
+  padding-bottom: calc(4.895833vw + 90px);
   @media (max-width: 810px) {
     padding-top: 136px;
     padding-bottom: 49px;

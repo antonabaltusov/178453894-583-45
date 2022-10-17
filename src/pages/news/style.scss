@@ -1,5 +1,5 @@
 main.news {
-  padding-bottom: 7.65625vw;
+  padding-bottom: calc(7.65625vw + 90px);
   & h1 {
     display: block;
     width: fit-content;
