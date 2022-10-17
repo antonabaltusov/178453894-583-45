@@ -12,10 +12,12 @@
     margin-right: 1.3vw;
   }
   
+
   &__notifications {
     display: none;
     @media (max-width: 810px) {
       display: block;
     }
   }
+
 }
