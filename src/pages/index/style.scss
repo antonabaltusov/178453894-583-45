@@ -43,9 +43,11 @@
       left: 50%;
       right: 0;
       min-width: 100vw;
-      height: 1080px;
-      @media (max-width: 810px) {
-       height: 80%;
+      height: 100%;
+      opacity: 0;
+      transition: 0.1;
+      &.show {
+        opacity: 1;
       }
     }
     &::after {

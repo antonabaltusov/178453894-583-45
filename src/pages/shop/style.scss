@@ -44,7 +44,13 @@
       }
     }
     &__types {
-      
+      &-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar { width: 0; }
+      }
+      width: max-content;
       position: relative;
       padding: 0 2.5em;
       margin-bottom: 0.5em;
@@ -57,8 +63,8 @@
         width: 100%;
         position: absolute;
         bottom: -3px;
-        left: 0;
-        transform: translateY(50%);
+        left: 50%;
+        transform: translateY(50%) translateX(-50%);
         height: fit-content;
       }
       & button {
