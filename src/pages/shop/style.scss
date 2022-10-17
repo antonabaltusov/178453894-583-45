@@ -1,5 +1,9 @@
 .shop {
   position: relative;
+  & .container {
+    position: relative;
+    z-index: 15;
+  }
   z-index: 15;
   padding-top: 2.68em;
   padding-bottom: calc(5.2vw + 90px);
