@@ -90,6 +90,7 @@
       }
       @media (max-width: 810px) {
         display: flex;
+        width: 100%;
         justify-content: space-around;
         padding: 0 30px;
         &__button {
