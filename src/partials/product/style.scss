@@ -1,9 +1,81 @@
 .product {
   z-index: 10;
   display: flex;
-  background: black;
-  border: 1px solid #635c4c;
-  border-radius: 5px;
+  position: relative;
+  padding: 0 10px;
+  width: 310px;
+  height: 164px;
+
+  &__border {
+    position: absolute;
+    z-index: 20;
+    &-top, &-bottom {
+      left: 10px;
+      right: 10px;
+    }
+    &-top {
+      top: 0;
+      border-top: 1px solid #635c4c;
+    }
+    &-bottom {
+      bottom: 0;
+      border-bottom: 1px solid #635c4c;
+    }
+    &-left, &-right {
+      top: 10px;
+      bottom: 10px;
+      width: 11px;
+      background-color: black;
+      &::before, &::after, &-top, &-bottom {
+        content: '';
+        width: calc(10px * 1.41421356237);
+        height: calc(10px * 1.41421356237);
+        position: absolute;
+        background-color: inherit;
+      }
+      &::before, &-top {
+        bottom: 100%;
+      }
+      &::after, &-bottom {
+        top: 100%;
+      }
+    }
+    &-left {
+      display: none;
+      left: 0;
+      border-left: 1px solid #635c4c;
+      &::before, &::after, &-top, &-bottom {
+        left: -1px;
+        border-left: 1px solid #635c4c; 
+      }
+      &::before, &-top {
+        transform: rotate(45deg);
+        transform-origin: left bottom;
+      }
+      &::after, &-bottom {
+        transform: rotate(-45deg);
+        transform-origin: left top;
+      }
+    }
+    &-right {
+      right: 0;
+      border-right: 1px solid #635c4c;
+      &::before, &::after, &-top, &-bottom {
+        right: -1px;
+        border-right: 1px solid #635c4c; 
+      }
+      &::before, &-top {
+        background-position: right top;
+        transform: rotate(-45deg);
+        transform-origin: right bottom;
+      }
+      &::after, &-bottom {
+        background-position: right bottom;
+        transform: rotate(45deg);
+        transform-origin: right top;
+      }
+    }
+  }
   &::after {
     content: "";
     display: block;
@@ -11,18 +83,86 @@
     padding-bottom: 52.9%;
   }
   &-img {
-    width: 40.6%;
-    height: calc(100% + 2px);
-    border: 1px solid #635c4c;
-    border-radius: 5px;
+    width: 106px;
+    height: 164px;
     position: relative;
-    bottom: 1px;
-    right: 1px;
-    background: linear-gradient(
-      180deg,
-      rgba(5, 8, 9, 0.2) 0%,
-      rgba(105, 173, 199, 0.2) 130.44%
-    );
+    z-index: 10;
+    background: linear-gradient(180deg, #050809 0%, #172930 130.44%);
+    background-size: 126px 164px;
+    background-position: center;
+    & .product__border {
+      &-left, &-right {
+        display: block;
+        background: inherit;
+        &::before, &::after {
+          display: none;
+        }
+        &-top, &-bottom {
+          background: inherit;
+          width: 10px;
+          overflow: hidden;
+          &::after {
+            content: '';
+            position: absolute;
+            width: 15px;
+            height: 10px;
+            background: inherit;
+            background-size: 126px 164px;
+          }
+        }
+        &-top {
+          bottom: calc(100% - 10px);
+        }
+        &-bottom {
+          top: calc(100% - 10px);
+        }
+      }
+      &-right {
+        left: 100%;
+        right: auto;
+        &-top, &-bottom {
+          left: calc(100% + 1px);
+          right: auto;
+          background: inherit;
+          background-size: 0;
+        }
+        &-top::after {
+          background-position: right top;
+          transform: rotate(45deg);
+          z-index: 1;
+        }
+        &-bottom::after {
+          top: 0;
+          right: 0;
+          background-position: right bottom;
+          transform-origin: top right;
+          transform: rotate(-45deg);
+        }
+      }
+      &-left {
+        right: calc(100% - 1px);
+        left: auto;
+        &-top, &-bottom {
+          right: 100%;
+          left: auto;
+          background: inherit;
+          background-size: 0;
+        }
+        &-top::after {
+          bottom: 0;
+          transform-origin: bottom left;
+          background-position: left top;
+          transform: rotate(-45deg);
+        }
+        &-bottom::after {
+          top: 0;
+          left: 0;
+          background-position: left bottom;
+          transform-origin: top left;
+          transform: rotate(45deg);
+        }
+      }
+    }
   }
   &-info {
     flex: 1;
@@ -30,6 +170,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    background-color: black;
     & h2 {
       font-weight: 500;
       font-size: 1.0625em;
