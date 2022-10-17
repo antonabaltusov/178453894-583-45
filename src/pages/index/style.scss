@@ -5,6 +5,7 @@
   }
   & ~ .footer {
     z-index: 50;
+    margin-top: -150px;
   }
   & .news-block {
     width: 100%;
@@ -177,7 +178,7 @@
       }
     }
     @media (max-width: 810px) {
-      margin-top: 35px;
+      margin-top: 35px !important;
       height: auto;
       display: flex;
       flex-direction: column;
@@ -187,13 +188,16 @@
         display: block;
         height: 42px;
         &:not(:last-child) {
-          margin-right: 0
+          margin-right: 0 !important;
         }
         &:not(.apple) {
           display: none;
         }
       }
       & .only-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         & p {
           margin: 30px auto 16px;
           font-size: 16px;
@@ -253,6 +257,7 @@
         background-size: auto 70%;
         justify-content: flex-end;
         height: 460px;
+        padding-left: 0;
       }
       &::after {
         content: '';
@@ -289,6 +294,7 @@
         }
       }
       &__black {
+        display: none;
         transform-origin: left top;
         transform: rotate(45deg);
         position: absolute;
@@ -299,6 +305,9 @@
         right: -14px;
         z-index: 20;
         border-left: 1px solid #ffe483;
+        @media (max-width: 810px) {
+          display: block;
+        }
       }
       &__top, &__bottom {
         z-index: 10;
@@ -309,6 +318,18 @@
       &__top {
         top: 0;
         border-top: 1px solid #ffe483;
+      }
+      &__bottom-gradinet {
+        display: none;
+        @media (max-width: 810px) {
+          display: block;
+          position: absolute;
+          bottom: 1;left: 1;right: 1;
+          top: 0;
+          z-index: 15;
+          background:  linear-gradient(180deg, rgba(15, 15, 19, 0) 60%, rgba(15, 15, 19, 0.4) 100%), linear-gradient(90deg, #0E0E12 0%, rgba(14, 14, 18, 0) 10.81%);
+        }
+
       }
       &__bottom {
         bottom: 0;
@@ -329,9 +350,22 @@
             display: block;
           }
         }
+        &::after {
+          content: url(../../assets/img/main/guide-fair.png);
+          display: none;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          
+          z-index: 20;
+          right: -9px;
+          @media (max-width: 810px) {
+            display: block;
+          }
+        }
       }
       &__left, &__right {
-        z-index: 10;
+        z-index: 19;
         background-color: black;
         position: absolute;
         width: 10px;
@@ -394,8 +428,7 @@
         z-index: 20;
         @media (max-width: 810px) {
         width: 100%;
-        padding: 0 10px 50px;
-
+        padding: 0 20px 50px;
         }
       }
       & h2 {
@@ -417,24 +450,50 @@
     position: relative;
     width: 100vw;
     height: 36.8421vw;
-    background: linear-gradient(270deg, #000 5.56%, rgba(15, 15, 19, 0) 39.23%),
-      linear-gradient(90deg, #000 6.66%, rgba(0, 0, 0, 0) 31.58%),
+    min-height: 580px;
+    @media (min-width: 810px) {
+      background: linear-gradient(270deg, #000 5.56%, rgba(15, 15, 19, 0) 39.23%),
+      linear-gradient(90deg, #000 6.66%, rgba(0, 0, 0, 0) 31.58%), url(../../assets/img/main/invait.jpg);
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+    
+    @media (max-width: 810px) {
+      background: 
+      linear-gradient(0deg, rgba(black, 1) 0%, rgba(0, 0, 0, 0) 30%),
+      linear-gradient(180deg, rgba(black, 1)0%, rgba(0, 0, 0, 0) 15%),
       url(../../assets/img/main/invait.jpg);
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+      background-size: auto 430px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
     &-border {
       position: absolute;
       z-index: 6;
       top: 100%;
       height: auto;
       width: 100%;
-      left: 0;
-      transform: translateY(-16%);
+      left: 50%;
+      transform: translateY(-16%) translateX(-50%);
+      margin: 0 auto;
+      &.only-mobile {
+        width: 83%;
+      }
     }
     &-info {
-      padding-top: 19.578vw;
-
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center;
+      padding-bottom: 142px;
+      @media (max-width: 810px) {
+        padding-bottom: 54px;
+        & p {
+          max-width: 230px;
+        }
+      }
       & .button-singin {
         margin-top: 2em;
         box-shadow: none;
@@ -445,6 +504,11 @@
         font-size: 1.4375em;
         line-height: 88.6%;
         width: fit-content;
+        @media (max-width: 810px) {
+          font-size: 18px;
+          padding: 15px 10px;
+          
+        }
         & *,
         & *::after,
         & *::before {
@@ -474,6 +538,7 @@
     width: 100vw;
     position: relative;
     height: 24.4736vw;
+    min-height: 458px;
     background: linear-gradient(90deg, #000 5.73%, rgba(14, 14, 18, 0) 16.87%),
       linear-gradient(270deg, #000 5.5%, rgba(14, 14, 18, 0) 16.26%),
       linear-gradient(180deg, #000 0%, rgba(14, 14, 18, 0) 26.56%),
@@ -482,21 +547,41 @@
     background-repeat: no-repeat;
     background-position: center;
     overflow: hidden;
+     @media (max-width: 810px) {
+      background:
+      url(../../assets/img/main/download.png);
+      background-size: auto 70%;
+      background-position: center top;
+      padding-bottom: 15%;
+    }
+    @media (max-width: 550px) {
+      background: linear-gradient(270deg, rgba(14, 14, 18, 0.1) 0%, rgba(14, 14, 18, 0.1) 100%),
+      url(../../assets/img/main/download-m.png);
+      background-size: cover;
+      background-position: center top;
+      background-repeat: no-repeat;
+    }
     & .container {
       position: relative;
       height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       &::after {
         content: url(../../assets/img/main/fair.png);
         position: absolute;
-        left: 0;
-        bottom: 0;
-        transform: translate(0, 25%);
+        left: 25%;
+        bottom: 60px;
+        transform: translate(-50%, 50%);
         opacity: 0.6;
         z-index: 40;
+         @media (max-width: 810px) {
+            display: none;
+          }
       }
     }
     & .block-info {
-      padding-top: 6.7vw;
     }
     & .soc-block {
       position: relative;

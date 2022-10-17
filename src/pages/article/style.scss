@@ -5,8 +5,14 @@
   padding-bottom: calc(4.895833vw + 90px);
   @media (max-width: 810px) {
     padding-top: 136px;
-    padding-bottom: 49px;
+    padding-bottom: calc(49px + 90px);
+    & .container {
+      width: 100%;
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
+ 
   & .breadcrumbs,
   .article__main {
     width: 100%;
@@ -35,7 +41,71 @@
   }
   &__main-img {
     width: 100%;
-    padding-bottom: 27.2307692307692%;
+    & .news-item .img-wrapper {
+      width: 1299px;
+      height: 354px;
+      background-size: 0;
+    }
+    & .news-item .news-img {
+      &__center {
+        background-size: 1299px 354px;
+      }
+      &__left,
+      &__right {
+        background-size: 1299px 354px;
+        &-top, 
+        &-bottom {
+          &::after {
+            background-size: 1299px 354px;
+          }
+        }
+      }
+    }
+    @media (max-width: 1300px) {
+      & .news-item .img-wrapper {
+        width: 97vw;
+        height: 27.2307692307692vw;
+        background-size: 0;
+      }
+      & .news-item .news-img {
+        &__center {
+          background-size: 97vw 27.2307692307692vw;
+        }
+        &__left,
+        &__right {
+          background-size: 97vw 27.2307692307692vw;
+          &-top, 
+          &-bottom {
+            &::after {
+              background-size: 97vw 27.2307692307692vw;
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 810px) {
+      & .news-item .img-wrapper {
+        width: 89.2307692307692vw;
+        height: 36.9230769230769vw;
+        background-size: 0;
+      }
+      & .news-item .news-img {
+        margin: 0 auto;
+        &__center {
+          background-size: 89.2307692307692vw 36.9230769230769vw;
+        }
+        &__left,
+        &__right {
+          background-size: 89.2307692307692vw 36.9230769230769vw;
+          &-top, 
+          &-bottom {
+            &::after {
+              background-size: 89.2307692307692vw 36.9230769230769vw;
+            }
+          }
+        }
+      }
+    }
   }
   &__main {
     color: $F5E3CC;
