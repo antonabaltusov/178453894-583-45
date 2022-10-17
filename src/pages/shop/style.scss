@@ -1,4 +1,6 @@
 .shop {
+  position: relative;
+  z-index: 5;
   padding-top: 2.68em;
   padding-bottom: calc(5.2vw + 90px);
   @media (max-width: 810px) {
@@ -26,10 +28,16 @@
     }
     
     & .input {
+      position: relative;
+      z-index: 10;
+      background-color: black;
       width: 100%;
       max-width: 480px;
       font-size: 1.125em;
       padding: 0.6em 1.05em;
+      & *, & *::after, & *::before, &::before, &::after  {
+        background-color: black;
+      }
     }
     &__types {
       
