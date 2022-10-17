@@ -24,3 +24,5 @@
 @import '../partials/news-item/style.scss';
 @import '../partials/balance-item/style.scss';
 @import '../partials/product/style.scss';
+
+@import '../../node_modules/swiper/swiper.min.css'

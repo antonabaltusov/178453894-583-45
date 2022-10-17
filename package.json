@@ -36,6 +36,7 @@
     "postcss-simple-vars": "^7.0.0"
   },
   "dependencies": {
-    "express": "4.18.1"
+    "express": "4.18.1",
+    "swiper": "^8.4.4"
   }
 }

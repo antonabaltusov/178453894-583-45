@@ -114,7 +114,6 @@
   }
   & h2 {
     max-width: 100%;
-    height: 1em;
     font-weight: 700;
     font-size: 2rem;
     margin-top: 1rem;
@@ -133,5 +132,10 @@
     font-size: 1.375rem;
     margin-top: 1rem;
     line-height: 130%;
+  }
+  @media (max-width: 810px) {
+    & h2, p {
+      padding-left: 10px;
+    }
   }
 }

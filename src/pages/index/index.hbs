@@ -1,8 +1,10 @@
 {{!< body }}
 <main class="main-page">
   <div class="news-block">
-    <video src="../../assets/vidoe/VS_FullVersion_newPackShot.mp4" autoplay loop preload muted ></video>
-    <div class="container">
+    <div class="video-wrapper">
+      <video src="../../assets/vidoe/VS_FullVersion_newPackShot.mp4" autoplay loop preload muted ></video>
+    </div>
+    <div class="container video">
       <div>
         <div class="main-page-title">
           <h1>Masters & Heroes</h1>
@@ -10,8 +12,8 @@
         </div>
         {{> "soc-block/soc-block" }}
       </div>
-      <div class="news-block-main">
-        <a href="../news/news.hbs">Все новости</a>
+      <div class="news-block-main only-desktop">
+        <a class="to-all-news" href="../news/news.hbs">Все новости</a>
         <div class="news-list">
           {{> "news-item/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union.png" title="Ваши Герои" itemDate="22 / 03 / 2022" desription="Особенности боевой системы" }}
           {{> "news-item/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union-2.png" title="Ваши противники" itemDate="22 / 03 / 2022" desription="Вы столкнетесь с опасными существами — посмотрим на них повнимательнее" }}
@@ -20,8 +22,42 @@
       </div>
     </div>
   </div>
+  <div class="container with-slider only-mobile">
+       <div class="news-block-main only-mobile">
+        <div class="slider-nav">
+          <div>
+            <div class="swiper-prev">
+              <img src="../../assets/img/slider/to-left.svg" alt="">
+            </div>
+            <div class="swiper-next">
+              <img src="../../assets/img/slider/to-right.svg" alt="">
+            </div>
+          </div>
+          <a class="to-all-news" href="../news/news.hbs">Все новости</a>
+        </div>
+        <div class="swiper news-list">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              {{> "news-item/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union.png" title="Ваши Герои" itemDate="22 / 03 / 2022" desription="Особенности боевой системы" }}
+            </div>
+            <div class="swiper-slide">
+              {{> "news-item/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union-2.png" title="Ваши противники" itemDate="22 / 03 / 2022" desription="Вы столкнетесь с опасными существами — посмотрим на них повнимательнее" }}
+            </div>
+            <div class="swiper-slide">
+              {{> "news-item/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union-3.png" title="Ваш город" itemDate="22 / 03 / 2022" desription="Первый взгляд на экран поселения и знакомство с Мастерами" }}
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
   <div class="guide-wrapper container">
     <div class="guide-block">
+
+      <div class="guide-block__black"></div>
+      <div class="guide-block__left"></div>
+      <div class="guide-block__right"></div>
+      <div class="guide-block__top"></div>
+      <div class="guide-block__bottom"></div>
       <div class="guide-block__info">
         <h2>гайд для новичка</h2>
         <p>Кириллическая рыба используется дизайнерами, когда нужно быстро заполнить макеты или прототипы содержимым.</p>

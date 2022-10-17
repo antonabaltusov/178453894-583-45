@@ -3,6 +3,7 @@ import swither from "./swither";
 import search from "./search";
 import mobileMenu from "./mobile-menu";
 import "./polifils";
+import slider from "./slider";
 const windowWidth = document.documentElement.clientWidth;
 if (windowWidth < 390) {
   const viewport = document.querySelector("meta[name=viewport]");
@@ -14,4 +15,5 @@ document.addEventListener("DOMContentLoaded", () => {
   swither();
   search();
   mobileMenu();
+  slider()
 });
