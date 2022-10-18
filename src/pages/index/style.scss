@@ -102,6 +102,9 @@
     }
     &-main {
       margin-top: 20px;
+      @media (max-width: 810px) {
+          margin-top: 60px;
+        }
       & .news-list {
         column-gap: 26px;
         @media (max-width: 1300px) {
