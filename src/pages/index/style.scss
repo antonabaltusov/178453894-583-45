@@ -242,7 +242,6 @@
     &-block {
       background-size: auto 100%;
       background-position: 90% 50%;
-      background-color: black;
       background-image: url(../../assets/img/main/bg-guide-1.png);
       background-repeat: no-repeat;
       position: relative;
@@ -265,14 +264,20 @@
         content: '';
         position: absolute;
         z-index: 0;
-        top: 0;
+        top: 10px;
         left: 0;
-        bottom: 0;
+        bottom: 10px;
         right: 0;
         z-index: 8;
-        background: linear-gradient(270deg, #0E0E12 0%, rgba(14, 14, 18, 0) 47.17%), linear-gradient(180deg, #0E0E12 4.63%, rgba(14, 14, 18, 0.93) 15.56%, rgba(15, 15, 19, 0) 63.5%, black 100%), linear-gradient(90deg, #0E0E12 40.26%, rgba(14, 14, 18, 0) 50.81%);
+        background: 
+        linear-gradient(270deg, #000 5%, rgba(14, 14, 18, 0) 47.17%), 
+        linear-gradient(180deg, #000 5.63%, rgba(14, 14, 18, 0.93) 25.56%, rgba(15, 15, 19, 0) 63.5%, black 100%), 
+        linear-gradient(90deg, #000 40.26%, rgba(14, 14, 18, 0) 50.81%);
         @media (max-width: 810px) {
-          background: linear-gradient(270deg, #0E0E12 0%, rgba(14, 14, 18, 0) 7.17%), linear-gradient(180deg, #0E0E12 4.63%, rgba(14, 14, 18, 0.93) 20.56%, rgba(15, 15, 19, 0) 50.5%, black 90%), linear-gradient(90deg, #0E0E12 0%, rgba(14, 14, 18, 0) 10.81%);
+          background: 
+          linear-gradient(270deg, #000 5%, rgba(14, 14, 18, 0) 25.17%), 
+          linear-gradient(180deg, #000 4.63%, rgba(14, 14, 18, 0.93) 20.56%, rgba(15, 15, 19, 0) 50.5%, black 90%), 
+          linear-gradient(90deg, #000 5%, rgba(14, 14, 18, 0) 10.81%);
         }
       }
       &::before {
@@ -316,18 +321,23 @@
         position: absolute;
         left: 10px;
         right: 10px;
+        height: 10px;
+        background-color: black;
       }
       &__top {
         top: 0;
         border-top: 1px solid #ffe483;
+        background-color: black;
       }
       &__bottom-gradinet {
         display: none;
         @media (max-width: 810px) {
           display: block;
           position: absolute;
-          bottom: 1;left: 1;right: 1;
-          top: 0;
+          bottom: 1px;
+          left: 10px;
+          right: 1px;
+          top: 10px;
           z-index: 15;
           background:  linear-gradient(180deg, rgba(15, 15, 19, 0) 60%, rgba(15, 15, 19, 0.4) 100%), linear-gradient(90deg, #0E0E12 0%, rgba(14, 14, 18, 0) 10.81%);
         }
@@ -392,9 +402,11 @@
       &__left {
        left: 0;
         border-left: 1px solid #ffe483;
+        background-color: black;
         &::before, &::after {
           right: 0;
           border-left: 1px solid #ffe483; 
+          background-color: black;
         }
         &::before {
           transform: rotate(45deg);
