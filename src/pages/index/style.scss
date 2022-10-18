@@ -237,6 +237,9 @@
         top: 0;
         left: 6%;
         width: 70.9%;
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
+        -webkit-perspective: 1000;
       }
     }
     &-block {
@@ -477,6 +480,22 @@
       background: 
       linear-gradient(0deg, rgba(black, 1) 0%, rgba(0, 0, 0, 0) 30%),
       linear-gradient(180deg, rgba(black, 1)0%, rgba(0, 0, 0, 0) 15%),
+      url(../../assets/img/main/invait.jpg);
+      background: 
+      -webkit-linear-gradient(0deg, rgba(black, 1) 0%, rgba(0, 0, 0, 0) 30%),
+      -webkit-linear-gradient(180deg, rgba(black, 1)0%, rgba(0, 0, 0, 0) 15%),
+      url(../../assets/img/main/invait.jpg);
+      background: 
+      -moz-linear-gradient(0deg, rgba(black, 1) 0%, rgba(0, 0, 0, 0) 30%),
+      -moz-linear-gradient(180deg, rgba(black, 1)0%, rgba(0, 0, 0, 0) 15%),
+      url(../../assets/img/main/invait.jpg);
+      background: 
+      -ms-linear-gradient(0deg, rgba(black, 1) 0%, rgba(0, 0, 0, 0) 30%),
+      -ms-linear-gradient(180deg, rgba(black, 1)0%, rgba(0, 0, 0, 0) 15%),
+      url(../../assets/img/main/invait.jpg);
+      background: 
+      -o-linear-gradient(0deg, rgba(black, 1) 0%, rgba(0, 0, 0, 0) 30%),
+      -o-linear-gradient(180deg, rgba(black, 1)0%, rgba(0, 0, 0, 0) 15%),
       url(../../assets/img/main/invait.jpg);
       background-size: auto 430px;
       background-repeat: no-repeat;
