@@ -265,19 +265,19 @@
         position: absolute;
         z-index: 0;
         top: 10px;
-        left: 0;
+        left: 1px;
         bottom: 10px;
-        right: 0;
+        right: 1px;
         z-index: 8;
         background: 
-        linear-gradient(270deg, #000 5%, rgba(14, 14, 18, 0) 47.17%), 
-        linear-gradient(180deg, #000 5.63%, rgba(14, 14, 18, 0.93) 25.56%, rgba(15, 15, 19, 0) 63.5%, black 100%), 
-        linear-gradient(90deg, #000 40.26%, rgba(14, 14, 18, 0) 50.81%);
+        linear-gradient(270deg, #0E0E12 10px, rgba(14, 14, 18, 0) 47.17%), 
+        linear-gradient(180deg, #0E0E12 4.63%, rgba(14, 14, 18, 0.93) 15.56%, rgba(15, 15, 19, 0) 63.5%, black 100%), 
+        linear-gradient(90deg, #0E0E12 40.26%, rgba(14, 14, 18, 0) 50.81%);
         @media (max-width: 810px) {
           background: 
-          linear-gradient(270deg, #000 5%, rgba(14, 14, 18, 0) 25.17%), 
-          linear-gradient(180deg, #000 4.63%, rgba(14, 14, 18, 0.93) 20.56%, rgba(15, 15, 19, 0) 50.5%, black 90%), 
-          linear-gradient(90deg, #000 5%, rgba(14, 14, 18, 0) 10.81%);
+          linear-gradient(270deg, #0E0E12 0%, rgba(14, 14, 18, 0) 15.17%), 
+          linear-gradient(180deg, #0E0E12 4.63%, rgba(14, 14, 18, 0.93) 20.56%, rgba(15, 15, 19, 0) 50.5%, black 90%), 
+          linear-gradient(90deg, #0E0E12 0%, rgba(14, 14, 18, 0) 10.81%);
         }
       }
       &::before {
@@ -320,14 +320,13 @@
         z-index: 10;
         position: absolute;
         left: 10px;
-        right: 10px;
         height: 10px;
-        background-color: black;
+        right: 10px;
+        background-color: #0E0E12;
       }
       &__top {
         top: 0;
         border-top: 1px solid #ffe483;
-        background-color: black;
       }
       &__bottom-gradinet {
         display: none;
@@ -378,7 +377,7 @@
       }
       &__left, &__right {
         z-index: 19;
-        background-color: black;
+        background-color: #0E0E12;
         position: absolute;
         width: 10px;
         top: 10px;
@@ -402,11 +401,11 @@
       &__left {
        left: 0;
         border-left: 1px solid #ffe483;
-        background-color: black;
+        background-color: #0E0E12;
         &::before, &::after {
           right: 0;
           border-left: 1px solid #ffe483; 
-          background-color: black;
+          background-color: #0E0E12;
         }
         &::before {
           transform: rotate(45deg);
@@ -425,6 +424,7 @@
           border-right: 1px solid #ffe483; 
         }
         &::before {
+          background-color: #0E0E12;
           background-position: right top;
           transform: rotate(-45deg);
           transform-origin: right bottom;
