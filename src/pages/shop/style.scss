@@ -47,6 +47,7 @@
       &-wrapper {
         max-width: 100%;
         overflow-x: auto;
+        overflow-y: hidden;
         -ms-overflow-style: none;
         &::-webkit-scrollbar { width: 0; }
       }
@@ -62,10 +63,10 @@
       &-border {
         width: 100%;
         position: absolute;
-        bottom: -3px;
+        bottom: -4px;
         left: 50%;
         transform: translateY(50%) translateX(-50%);
-        height: fit-content;
+        height: 10px;
       }
       & button {
         position: relative;
