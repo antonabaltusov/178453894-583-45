@@ -5,6 +5,9 @@
   padding: 0 10px;
   width: 310px;
   height: 164px;
+  @media (max-width: 650px) {
+    width: 350px;
+  }
 
   &__border {
     position: absolute;
@@ -87,6 +90,7 @@
     height: 164px;
     position: relative;
     z-index: 10;
+    margin: 0 10px 0 0;
     background: linear-gradient(180deg, #050809 0%, #172930 130.44%);
     background-size: 126px 164px;
     background-position: center;
@@ -197,7 +201,21 @@
       & *::after,
       & *::before {
         border-color: #ffc734;
+        border-right-color: #ffc734;
+        border-left-color: #ffc734;
         background: #ffc734;
+      }
+      &:hover {
+        border-color: #ffe6a1;
+        background: #ffe6a1;
+        & *,
+        & *::after,
+        & *::before {
+          border-color: #ffe6a1;
+          border-right-color: #ffe6a1;
+          border-left-color: #ffe6a1;
+          background: #ffe6a1;
+        }
       }
     }
   }

@@ -104,6 +104,10 @@
     @media (max-width: 1150px) {
       grid-template-columns: repeat(auto-fit, 310px);
     }
+    @media (max-width: 650px) {
+      grid-template-columns: 350px;
+    }
+    
     &[data-type="oruzhie"] > :not([data-type="oruzhie"]) {
       display: none;
     }
