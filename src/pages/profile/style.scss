@@ -131,8 +131,14 @@
           margin-left: 0.8rem;
         }
       }
-      &__id span {
+      &__id { 
+        & a {
+          color: inherit;
+          text-decoration: none;
+        }
+        & span {
         text-transform: uppercase;
+        }
       }
     }
   }

@@ -4,7 +4,7 @@
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 53.84%);
   font-size: calc(9.6px + (8.1 * ((100vw - 390px) / 1920)));
   position: relative;
-  z-index: 500;
+  z-index: 400;
   @media (max-width: 450px) {
     padding: 3.6em 0;
   }
