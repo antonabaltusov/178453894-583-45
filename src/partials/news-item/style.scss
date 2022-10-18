@@ -116,21 +116,21 @@
     max-width: 100%;
     font-weight: 700;
     font-size: 2rem;
-    margin-top: 1rem;
+    margin-top: 1.25rem;
     line-height: 105.6%;
     text-transform: uppercase;
   }
   &__date {
     font-size: 1.375rem;
-    margin-top: 0.6rem;
     line-height: 130%;
     & p {
+      margin-top: 0.3rem !important;
       color: #7d7a72;
     }
   }
   & p {
     font-size: 1.375rem;
-    margin-top: 1rem;
+    margin-top: 0.59em;
     line-height: 130%;
   }
   @media (max-width: 810px) {

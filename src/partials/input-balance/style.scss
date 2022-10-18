@@ -61,14 +61,45 @@
     & * {
       background-color: #FFC734;
     }
-    
+    & .button-singin__text {
+      padding-top: 0.1em;
+    }
   }
-  & .shot-raund-radius__wrapper {
-    @media (max-width: 1300px) {
-      position: absolute;
-      transform: translateX(-50%);
-      top: calc(100% + 32px);
-      left: 50%;
-     }
+  & .shot-raund-radius {
+    &-border-left,
+    &-border-right {
+      width: 7px;
+      top: 7px;
+      bottom: 7px;
+      &::before,
+      &::after {
+        width: 7;
+        height: calc((7px * 1.41421356237) + 3px);
+      }
+    }
+    &-border-left {
+      &::before {
+        border-top-left-radius: 35%;
+      }
+      &::after {
+        border-bottom-left-radius: 35%;
+      }
+    }
+    &-border-right {
+      &::before {
+        border-top-right-radius: 35%;
+      }
+      &::after {
+        border-bottom-right-radius: 35%;
+      }
+    }
+    &__wrapper {
+      @media (max-width: 1300px) {
+        position: absolute;
+        transform: translateX(-50%);
+        top: calc(100% + 32px);
+        left: 50%;
+      }
+    }
   }
 }

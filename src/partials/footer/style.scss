@@ -18,6 +18,9 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.75em;
+    @media (max-width: 810px) {
+      margin-bottom: 17px;
+    }
   }
   &-soc {
     &__list {

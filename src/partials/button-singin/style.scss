@@ -6,8 +6,8 @@
   line-height: 88.6%;
   font-size: 1em;
   font-weight: 700;
-  padding: 0.6875em 0.3em;
-  margin: 0 5px;
+  padding: 0.6875em 0.25em;
+  margin: 0 10px;
   box-shadow: 0px 0px 8px #ff7b0078;
   &:hover {
     cursor: pointer;
@@ -29,14 +29,6 @@
     box-shadow: 0px 0px 8px #ff7b0078;
     border-color: #ffc734;
   }
-  // & .shot-raund-radius {
-  //   &-border-left,
-  //   &-border-right {
-  //     width: 0.6875em;
-  //     top: 0.6875em;
-  //     bottom: 0.6875em;
-  //   }
-  // }
   &__text {
     position: absolute;
     top: 0;

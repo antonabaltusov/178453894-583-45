@@ -13,14 +13,20 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 100%;
-    & > *:nth-child(2n){
+    text-align: left;
+    & > :nth-child(2) {
+      order: 1;
+    }
+    & > :nth-child(3) {
+      order: 2;
       text-align: right;
     }
-    & .link:not(:last-child) {
+    & > .link:not(:last-child) {
       margin-right: 0;
     }
     & .copyright {
       display: inline;
+      text-align: right;
     }
   }
 }

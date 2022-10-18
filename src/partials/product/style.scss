@@ -189,14 +189,44 @@
         margin-right: 0.5em;
       }
     }
+    & .money {
+      width: fit-content;
+      & img {
+        width: 28px;
+        height: 26px;
+      }
+      & span {
+        padding-bottom: 0.1em;
+      }
+    }
     & .button-singin {
       border-color: #ffc734;
       background: #ffc734;
+      border: none;
       color: black;
       font-weight: 500;
       font-size: 0.75em;
       line-height: 88.6%;
       width: fit-content;
+      border-radius: 0 !important;
+      box-shadow: none;
+      & *,  *::before, *::after{
+        box-shadow: none;
+      }
+      .shot-raund-radius {
+        &-border-left,
+        &-border-right {
+          width: 5px;
+          top: 5px;
+          bottom: 5px;
+          &::before,
+          &::after {
+            width: 5;
+            height: calc((5px * 1.41421356237));
+            border-radius: 0 !important;
+          }
+        }
+      }
       & *,
       & *::after,
       & *::before {
