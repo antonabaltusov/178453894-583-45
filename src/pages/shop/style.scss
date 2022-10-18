@@ -35,7 +35,7 @@
       position: relative;
       z-index: 10;
       background-color: black;
-      width: 100%;
+      width: calc(100% - 10px);
       max-width: 480px;
       font-size: 1.125em;
       padding: 0.6em 1.05em;
