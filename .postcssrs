@@ -1,10 +1,10 @@
 {
   "plugins": {
+    "autoprefixer": true,
     "postcss-import": true,
     "postcss-mixins": true,
     "postcss-simple-vars": true,
     "postcss-nested": true,
-    "postcss-math": true,
-    "autoprefixer": true
+    "postcss-math": true
   }
 }

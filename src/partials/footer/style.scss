@@ -49,12 +49,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &-left {
+      display: flex;
+      @media (max-width: 810px) {
+       width: 100%;
+      }
+    }
     & .min-age {
+      margin-left: 65px;
       color: white;
       font-size: 2em;
       line-height: 1.2;
       font-weight: 800;
-      @media (max-width: 768px) {
+      @media (max-width: 1200px) {
+        margin-left: 35px;
+       }
+      @media (max-width: 810px) {
         display: none;
       }
     }
@@ -62,7 +72,7 @@
       color: white;
       font-size: 1.25em;
       line-height: 1.2;
-      @media (max-width: 768px) {
+      @media (max-width: 810px) {
         display: none;
       }
     }

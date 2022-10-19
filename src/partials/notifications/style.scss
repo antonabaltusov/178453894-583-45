@@ -3,10 +3,21 @@
   visibility: visible;
   width: 19px;
   height: 20px;
-  background-image: url(../../assets/img/notifications.svg);
-  background-size: contain;
-    &:hover {
-      cursor: pointer;
-      background-image: url(../../assets/img/notifications-hover.svg);
+  & img {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+  }
+  & img.notifications-hover {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+    & img:not(.notifications-hover) {
+      display: none;
     }
+    & img.notifications-hover {
+      display: block;
+    }
+  }
 }

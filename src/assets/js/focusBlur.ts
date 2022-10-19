@@ -12,7 +12,14 @@ export default function focusBlur() {
       const wrapper = input.closest('.input');
       if(wrapper) {
         wrapper.classList.remove('active');
+        if (input.value) {
+          wrapper.classList.add('value');
+        } else {
+          wrapper.classList.remove('value');
+        }
       }
+      console.log(input.value);
+      
     })
   })
 }
