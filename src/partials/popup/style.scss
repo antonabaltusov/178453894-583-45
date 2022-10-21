@@ -3,7 +3,7 @@
   z-index: 900;
   position: fixed;
   transform: translateX(-50%);
-  top: 149px;
+  top: calc((100vh - 720px)/2);
   left: 50%;
   height: fit-content;
   max-height: 720px;
@@ -12,6 +12,11 @@
   background-image: url(../../assets/img/popup/popup-bg.png);
   background-size: 100% 100%;
   display: none;
+  @media (max-width: 1200px) {
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    max-height: 95vh;
+  }
   &  ~ .overlay {
     display: none;
     z-index: 899;
