@@ -8,6 +8,9 @@
 @import '../pages/profile/style.scss';
 @import '../pages/shop/style.scss';
 @import '../pages/index/style.scss';
+@import '../pages/product/style.scss';
+@import '../pages/auth/style.scss';
+
 @import '../partials/input/style.scss';
 @import '../partials/input-balance/style.scss';
 @import '../partials/link/style.scss';
@@ -25,5 +28,8 @@
 @import '../partials/balance-item/style.scss';
 @import '../partials/product/style.scss';
 @import '../partials/button-yellow/style.scss';
+@import '../partials/popup/style.scss';
+@import '../partials/auth-form/style.scss';
+@import '../partials/confirm/style.scss';
 
 @import '../assets/js/swiper/swiper-bundle.min.css'

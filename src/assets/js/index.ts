@@ -5,6 +5,7 @@ import mobileMenu from "./mobile-menu";
 import "./polifils";
 import slider from "./slider";
 import startVideo from "./video";
+import popupFunc from "./popup";
 const windowWidth = document.documentElement.clientWidth;
 if (windowWidth < 390) {
   const viewport = document.querySelector("meta[name=viewport]");
@@ -18,4 +19,5 @@ document.addEventListener("DOMContentLoaded", () => {
   mobileMenu();
   slider();
   startVideo();
+  popupFunc();
 });

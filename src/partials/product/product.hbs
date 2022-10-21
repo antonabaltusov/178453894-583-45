@@ -6,8 +6,8 @@
     </picture>
   </div>
   <div class="product-info">
-    <h2>{{title}}</h2>
+    <h2><a href="../../pages/product/product.hbs">{{title}}</a></h2>
     {{> "money/money" count=summ }}
-    {{> "button-yellow/button-yellow" text="Купить" }}
+    {{> "button-yellow/button-yellow" text="Купить" popup="confirm"}}
   </div>
 </div>

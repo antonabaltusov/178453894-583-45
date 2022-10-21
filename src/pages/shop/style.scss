@@ -98,13 +98,10 @@
   &__list {
     margin-top: 3em;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, 310px);
     justify-content: center;
     column-gap: 1.3em;
     row-gap: 1.8em;
-    @media (max-width: 1150px) {
-      grid-template-columns: repeat(auto-fit, 310px);
-    }
     @media (max-width: 650px) {
       grid-template-columns: 350px;
     }

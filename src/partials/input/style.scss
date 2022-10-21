@@ -4,6 +4,7 @@
   border-top: 1px solid #635c4c;
   border-bottom: 1px solid #635c4c;
   color: #635c4c;
+
   
   & input::-webkit-input-placeholder {
     color: #635c4c;
@@ -18,6 +19,36 @@
   @media (max-width: 810px) {
     margin-top: 25px;
     font-size: 17px;
+    &.shot-raund-radius {
+      margin: 0 6px;
+      & .shot-raund-radius-border-left,
+      & .shot-raund-radius-border-right {
+        width: 6px;
+        top: 6px;
+        bottom: 6px;
+        &::before,
+        &::after {
+          width: 6;
+          height: calc((6px * 1.41421356237) + 1.5px);
+        }
+      }
+      & .shot-raund-radius-border-left {
+        &::before {
+          border-top-left-radius: 15%;
+        }
+        &::after {
+          border-bottom-left-radius: 15%;
+        }
+      }
+      & .shot-raund-radius-border-right {
+        &::before {
+          border-top-right-radius: 15%;
+        }
+        &::after {
+          border-bottom-right-radius: 15%;
+        }
+      }
+    }
   }
   &::before,
   &::after {
@@ -38,7 +69,7 @@
     right: 0;
   }
   & label {
-    padding-right: 3.125vw;
+    width: 90px;
     border-right: 1px solid #635c4c;
     @media (max-width: 810px) {
       border-right: none;

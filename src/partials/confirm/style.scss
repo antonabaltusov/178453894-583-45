@@ -1,0 +1,121 @@
+.confirm-block {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  color: #F5E3CC;
+  text-align: center;
+  & h2 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 105.6%;
+    text-transform: uppercase;
+  }
+  & > p {
+    margin-top: 50px;
+    font-size: 22px;
+    line-height: 130%;
+    max-width: 503px;
+  }
+  & .money {
+    margin-top: 35px;
+    pointer-events: none;
+    font-size: 52px;
+    color: #F5E3CC;
+    text-shadow: 0px -2px 11px #000000, 0px 5px 6px #000000;
+    display: flex;
+    align-items: center;
+    & img {
+      width: 40px;
+      height: 37px;
+      margin-top: 0.2em;
+    }
+     @media (max-width: 810px) {
+      margin-top: 35px;
+    }
+  }  
+  & .button-yellow {
+    text-transform: none;
+    padding: 0;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 88.6%;
+    width: fit-content;
+    margin: 40px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 58px;
+    width: 172px;   
+  }
+  &.not-money-block & .button-yellow {
+    margin-top: 30px;
+  }
+  & .pay-card {
+    &__list {
+      margin-top: 29px;
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      flex-wrap: wrap;
+      @media (max-width: 810px) {
+        display: grid;
+        grid-template-columns: repeat(2, 172px);
+      }
+      @media (max-width: 500px) {
+        display: grid;
+        grid-template-columns: repeat(2, 116px);
+      }
+    }
+    &__item {
+      position: relative;
+      height: 79px;
+      width: 172px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @media (max-width: 810px) {
+        &:nth-child(1) {
+          order: 1;
+        }
+        &:nth-child(3) {
+          order: 2;
+        }
+        &:nth-child(2) {
+          order: 3;
+        }
+        &:nth-child(4) {
+          order: 4;
+        }
+      }
+
+      @media (max-width: 500px) {
+        height: 53px;
+        width: 116px;
+        & img {
+          max-width: calc(100% - 30px);
+          max-height: 45%;
+          object-fit: contain;
+        }
+      }
+      & .border {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        &-xs {
+          display: none;
+        }
+        @media (max-width: 810px) {
+          display: none;
+          &-xs {
+            display: block;
+          }
+        }
+      }
+      & .logo {
+
+      }
+    }
+  }
+}

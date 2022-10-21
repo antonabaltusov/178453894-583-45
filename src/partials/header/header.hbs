@@ -13,7 +13,7 @@
       {{> "money/money" count="9999"}}
       {{> "notifications/notifications" }}
       {{else}}
-      {{> "button-singin/button-singin" text="войти" link="../../pages/profile/profile.hbs"}}
+      {{> "button-singin/button-singin" text="войти" popup="sing-in"}}
       {{/if}}
     </div>
   </div>
@@ -48,7 +48,7 @@
           <div class="user-info__id"><p><span>id</span> 1364622</p></div>
         </div>
       {{else}}
-        {{> "button-singin/button-singin" text="войти" link="../../pages/profile/profile.hbs"}}
+        {{> "button-singin/button-singin" text="войти" link="../../pages/auth/auth.hbs"}}
       {{/if}}
     </div>
     <div>
