@@ -39,16 +39,16 @@
     }
     &:hover {
       color: black !important;
-      border-color: #ffe6a1;
-      background: #ffe6a1;
+      border-color: #F2A000;
+      background: #F2A000;
       
       & .shot-raund-radius-border-left,
       & .shot-raund-radius-border-right,
       *::after,
       *::before,
       * {
-        border-color: #ffe6a1;
-        background: #ffe6a1;
+        border-color: #F2A000;
+        background: #F2A000;
       }
     }
     font-weight: 500;

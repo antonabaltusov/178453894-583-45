@@ -1,4 +1,5 @@
 main.news {
+  margin-top: 76px;
   padding-bottom: calc(7.65625vw + 90px);
   & h1 {
     display: block;
@@ -32,10 +33,10 @@ main.news {
     line-height: 88.6%;
     align-items: center;
     text-transform: uppercase;
-    color: #FFC734;
+    color: #FFE6A1;
     &:hover {
       cursor: pointer;
-      color: #FFE6A1;
+      color: #FFC734;
     }
   }
 }
@@ -51,6 +52,7 @@ main.news {
 }
 @media (max-width: 890px) {
   main.news {
+    margin-top: 35px;
     padding-bottom: 180px;
   }
 }

@@ -12,7 +12,167 @@
       padding-left: 20px;
     }
   }
- 
+  & .article__table {
+    width: 100%;
+    max-width: 880px;
+    margin: 128 auto 0;
+    &-list {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 34% 28.4% 37.6%;
+      column-gap: 10px;
+      padding: 0 45px;
+      text-decoration: none;
+    }
+    &-head {
+      padding-bottom: 17px;
+      border-bottom: 2px solid #584A25;
+    }
+    &-body {
+      font-size: 24px;
+      line-height: 130%;
+      color: #EBD6A5;
+      font-weight: 400;
+      padding: 13px 0 29px;
+      border-bottom: 2px solid #584A25;
+      @media (max-width: 850px) {
+        font-size: 16px;
+      }
+      @media (max-width: 550px) {
+        font-size: 12px;
+      }
+      & .article__table-list {
+        padding-top: 13px;
+        padding-bottom: 12px;
+        &:hover {
+          cursor: pointer;
+          background: rgba($color: #584A25, $alpha: 0.1);
+        }
+      }
+    }
+    &-title {
+      font-weight: 400;
+    }
+    & h2 {
+      text-decoration: none;
+      text-transform: none;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 130%;
+      color: #EBD6A5;
+      @media (max-width: 850px) {
+        font-size: 19px;
+      }
+      @media (max-width: 550px) {
+        font-size: 14px;
+      }
+    }
+  }
+  &__quote {
+    width: 100%;
+    max-width: 880px;
+    padding: 9.8% 11.36%;
+    margin: 95px auto 0;
+    position: relative;
+    &-quote {
+      width: 8.6%;
+      height: auto;
+      position: absolute;
+      transform: translate(-50%, -40%);
+      top: 0;
+      left: 14.77%;
+    }
+    &-border {
+      &-top, 
+      &-bottom,
+      &-left,
+      &-right {
+        position: absolute;
+      }
+      &-top,
+      &-bottom {
+        left: 10px;
+        right: 10px;
+      }
+      &-top {
+        top: 0;
+        &::after, &::before {
+          content: '';
+          border-top: 1px solid #635C4C;
+          position: absolute;
+        }
+        &::before {
+          left: 0;
+          width: 7%;
+        }
+        &::after {
+          right: 0;
+          width: 79%;
+        }
+      }
+      &-bottom {
+       bottom: 0;
+       border-bottom: 1px solid #635C4C;
+      }
+      &-left,
+      &-right {
+        top: 10px;
+        bottom: 10px;
+        &::after, &::before {
+          content: '';
+          position: absolute;
+          height: calc(10px * 1.41421356237);
+        }
+        &::after {
+          top: 100%;
+        }
+        &::before {
+          bottom: 100%;
+        }
+      }
+      &-left {
+        left: 0;
+        border-left: 1px solid #635C4C;
+        &::after, &::before {
+          left: -1px;
+          border-left: 1px solid #635C4C;
+        }
+        &::after {
+          transform: rotate(-45deg);
+          transform-origin: left top;
+        }
+        &::before {
+          transform: rotate(45deg);
+          transform-origin: left bottom;
+        }
+      }
+      &-right {
+        right: 0;
+        border-right: 1px solid #635C4C;
+        &::before,
+        &::after {
+          right: -1px;
+          border-right: 1px solid #635C4C;
+        }
+        &::before {
+          border-top-right-radius: 30%;
+          transform: rotate(-45deg);
+          transform-origin: right bottom;
+        }
+        &::after {
+          border-bottom-right-radius: 30%;
+          transform: rotate(45deg);
+          transform-origin: right top;
+        }
+      }
+    }
+    & p {
+      font-style: italic;
+      font-size: 22px;
+      line-height: 130%;
+      color: #EBD6A5;
+    }
+  }
   & .breadcrumbs,
   .article__main {
     width: 100%;
@@ -63,21 +223,21 @@
     }
     @media (max-width: 1300px) {
       & .news-item .img-wrapper {
-        width: 97vw;
+        width: 94vw;
         height: 27.2307692307692vw;
         background-size: 0;
       }
       & .news-item .news-img {
         &__center {
-          background-size: 97vw 27.2307692307692vw;
+          background-size: 94vw 27.2307692307692vw;
         }
         &__left,
         &__right {
-          background-size: 97vw 27.2307692307692vw;
+          background-size: 94vw 27.2307692307692vw;
           &-top, 
           &-bottom {
             &::after {
-              background-size: 97vw 27.2307692307692vw;
+              background-size: 94vw 27.2307692307692vw;
             }
           }
         }

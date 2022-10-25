@@ -11,6 +11,20 @@
   &-logo {
     height: 100%;
     width: auto;
+    &__link {
+      position: relative;
+      &:hover {
+        & .header-logo-hover {
+          display: block;
+        }
+        & .header-logo:not(.header-logo-hover) {
+          display: none;
+        }
+      }
+    }
+    &-hover {
+      display: none;
+    }
   }
   & .container {
     height: 93.814%;
@@ -25,6 +39,20 @@
   }
   & .button-singin {
     font-size: 16px;
+    color: #FFE6A1;
+    border-color: #FFE6A1;
+    & * , *::after, *::before {
+      border-color: #FFE6A1;
+    }
+    &:hover {
+      color: #333240;
+      background-color: #FFC734;
+      border-color: #FFC734;
+      & * , *::after, *::before {
+        border-color: #FFC734;
+        background-color: #FFC734;
+      }
+    }
   }
   & .shot-raund-radius__wrapper {
     margin-left: 3vw;

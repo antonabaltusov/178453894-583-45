@@ -1,13 +1,60 @@
-<div  class="product" data-type="{{type}}">
-  
+<div  class="product {{#if sale}}sale{{/if}} {{#if bought}}bought{{/if}}" data-type="{{type}}">
+
+  <svg class="product-bg product-bg-active" width="420" height="224" viewBox="0 0 420 224" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M409.557 1.73354L419 11.0948L419 213.372L409.557 222.733L10.4427 222.733L1 213.372L1.00022 11.0946L10.4429 1.7334L409.557 1.73354Z" stroke="#FFC734" stroke-width="2"/>
+  </svg>
   <div class="product-img img-wrapper">
+    {{#if sale}}
+      <div class="sale-date">
+        <svg width="83" height="40" viewBox="0 0 83 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.197754 0.266602H82.8022V39.3616L41.5 32.5448L0.197754 39.3616V0.266602Z" fill="url(#paint0_linear_1428_382)"/>
+          <defs>
+          <linearGradient id="paint0_linear_1428_382" x1="40.4519" y1="0.266619" x2="40.4519" y2="41.7094" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FF8E25"/>
+          <stop offset="0.421875" stop-color="#973600"/>
+          <stop offset="1" stop-color="#F59E37"/>
+          </linearGradient>
+          </defs>
+        </svg>
+        <p>скидка до</p>
+        <span>{{sale-date}}</span>
+      </div>
+    {{/if}}
+    {{#if bought}}
+      <svg class="product-img-bought" width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g filter="url(#filter0_d_1534_295)">
+        <path d="M2.06158 2.54916L2.06152 25.8227L2.09433 25.7903L4.68067 28.3499L27.874 28.35L30.4603 25.7903L30.4931 25.8228L30.4932 2.54919L30.4604 2.58167L27.8741 0.0220094L4.68073 0.0219727L2.09439 2.58163L2.06158 2.54916Z" fill="#69C79F"/>
+        </g>
+        <path d="M21.8402 8.41235L13.9723 15.7114L10.6449 12.1606L8.44385 14.2231L13.8194 19.9598L23.8858 10.6297L21.8402 8.41235Z" fill="#F5E3CC"/>
+        <defs>
+        <filter id="filter0_d_1534_295" x="0.0615234" y="0.0219727" width="32.4316" height="32.3279" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+        <feOffset dy="2"/>
+        <feGaussianBlur stdDeviation="1"/>
+        <feComposite in2="hardAlpha" operator="out"/>
+        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.73 0"/>
+        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1534_295"/>
+        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1534_295" result="shape"/>
+        </filter>
+        </defs>
+      </svg>
+    {{/if}}
     <picture>
       <img src="{{imgSrc}}" alt="{{title}}" />
     </picture>
   </div>
   <div class="product-info">
     <h2><a href="../../pages/product/product.hbs">{{title}}</a></h2>
-    {{> "money/money" count=summ }}
-    {{> "button-yellow/button-yellow" text="Купить" popup="confirm"}}
+    {{> "money/money" count=summ sale=sale}}
+    <a class="button-yellow" data-popup="confirm">
+      <svg width="77" height="30" viewBox="0 0 77 30" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 5.36753L0 23.774L0.0697037 23.705L5.56419 29.1415L71.4358 29.1416L76.9303 23.7051L77 23.7741V5.36761L76.9303 5.43658L71.4358 7.80931e-05L5.56419 0L0.0697037 5.4365L0 5.36753Z" fill="#FFC734"/>
+      </svg>
+      <svg class="xs" width="147" height="41" viewBox="0 0 147 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 7.3936L0 32.7479L0.0960146 32.6529L7.66449 40.1415L138.401 40.1416L145.969 32.653L146.065 32.748V7.39371L145.969 7.48871L138.401 0.000107571L7.66449 0L0.0960146 7.4886L0 7.3936Z" fill="#FFC734"/>
+      </svg>
+      <p>Купить</p>
+    </a>
   </div>
 </div>

@@ -6,6 +6,7 @@ import "./polifils";
 import slider from "./slider";
 import startVideo from "./video";
 import popupFunc from "./popup";
+import productHover from "./product-hover";
 const windowWidth = document.documentElement.clientWidth;
 if (windowWidth < 390) {
   const viewport = document.querySelector("meta[name=viewport]");
@@ -20,4 +21,5 @@ document.addEventListener("DOMContentLoaded", () => {
   slider();
   startVideo();
   popupFunc();
+  productHover();
 });

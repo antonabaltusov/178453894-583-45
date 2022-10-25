@@ -1,5 +1,6 @@
 <div class="money">
   <img src="../../assets/img/money.svg" alt="money">
   <img class="active" src="../../assets/img/money-hover.svg" alt="money">
-  <span>{{count}}</span>
+  <span{{#if sale}} class="old-price"{{/if}}>{{count}}</span>
+  {{#if sale}}<span class="new-price">{{sale}}</span>{{/if}}
 </div>

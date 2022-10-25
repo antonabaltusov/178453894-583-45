@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  color: #ffc734;
+  color: #FFE6A1;
   font-size: 1em;
   font-weight: 700;
   line-height: 88.6%;
@@ -12,6 +12,9 @@
   }
   &:hover {
     cursor: pointer;
-    color: #ffe6a1;
+    color: #FFC734;
+    & svg path {
+      fill: #FFC734;
+    }
   }
 }

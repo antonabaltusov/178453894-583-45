@@ -1,9 +1,29 @@
 <div class="header-nav">
-  {{> "link/link" text="Об игре" link=""}}
-  {{> "link/link" text="Магазин" link="../../pages/shop/shop.hbs"}}
-  {{> "link/link" text="События" link=""}}
-  {{> "link/link" text="Новости" link="../../pages/news/news.hbs"}}
-  {{> "link/link" text="Поддержка" link=""}}
+  {{#if pageabout }}
+    {{> "link/link" text="Об игре" link="" class='active' }}
+  {{else}}
+    {{> "link/link" text="Об игре" link=""}}
+  {{/if}}
+  {{#if page-shop }}
+    {{> "link/link" text="Магазин" link="../../pages/shop/shop.hbs" class='active'}}
+  {{else}}
+    {{> "link/link" text="Магазин" link="../../pages/shop/shop.hbs"}}
+  {{/if}}
+  {{#if page-events }}
+    {{> "link/link" text="События" link="" class='active' }}
+  {{else}}
+   {{> "link/link" text="События" link=""}}
+  {{/if}}
+  {{#if page-news }}
+    {{> "link/link" text="Новости" link="../../pages/news/news.hbs" class='active' }}
+  {{else}}
+    {{> "link/link" text="Новости" link="../../pages/news/news.hbs"}}
+  {{/if}}
+  {{#if page-help }}
+    {{> "link/link" text="Поддержка" link="" class='active'}}
+  {{else}}
+    {{> "link/link" text="Поддержка" link=""}}
+  {{/if}}
   <div hidden>
   {{> "link/link" text="lk" link="../../pages/profile/profile-second.hbs"}}
 
