@@ -3,6 +3,7 @@ export default function startVideo() {
   if (videoEl) {
     videoEl.addEventListener('canplaythrough', (e) => {
       console.log('video loaded');
+      videoEl.click();
       if (videoEl.playing) {
         console.log('video playing');
       }
