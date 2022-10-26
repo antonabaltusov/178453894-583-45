@@ -13,6 +13,7 @@ if (windowWidth < 390) {
   viewport!.setAttribute('content', 'width=390, initial-scale=1');
 
 }
+
 document.addEventListener("DOMContentLoaded", () => {
   focusBlur();
   swither();

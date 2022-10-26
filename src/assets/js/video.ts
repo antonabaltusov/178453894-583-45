@@ -1,19 +1,21 @@
 export default function startVideo() {
+  
   const videoEl = document.querySelector('video') as HTMLVideoElement;
   if (videoEl) {
+    Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+      get: function () {
+          return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+      }
+    });
     videoEl.addEventListener('canplaythrough', (e) => {
       console.log('video loaded');
-      videoEl.click();
-      if (videoEl.playing) {
-        console.log('video playing');
+      console.log(videoEl.playing);
+      if (!videoEl.playing) {
+        videoEl.play();
+        console.log('on play');
       }
-      else {
-          videoEl.play();
-          console.log('on play');
-      }
-      videoEl.play();
       videoEl.classList.add('show');
-    })
+    },{once: true})
   }
   
 }
