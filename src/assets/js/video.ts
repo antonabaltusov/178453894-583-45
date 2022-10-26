@@ -6,6 +6,7 @@ export default function startVideo() {
   if (videoEl) {
     videoEl.addEventListener('canplaythrough', (e) => {
       console.log('video loaded');
+      videoEl.play();
       videoEl.classList.add('show');
     })
   }
