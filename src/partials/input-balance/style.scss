@@ -4,6 +4,9 @@
   @media (max-width: 1300px) {
     margin-bottom: 70px;
   }
+  @media (max-width: 810px) {
+    padding: 0.65em 0.95em;
+  }
   &.active {
     & .button-singin {
       border-color: #ffc734;

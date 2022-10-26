@@ -1,4 +1,4 @@
-<div  class="product {{#if sale}}sale{{/if}} {{#if bought}}bought{{/if}}" data-type="{{type}}">
+<a href="../../pages/product/product.hbs"  class="product {{#if sale}}sale{{/if}} {{#if bought}}bought{{/if}}" data-type="{{type}}">
 
   <svg class="product-bg product-bg-active" width="420" height="224" viewBox="0 0 420 224" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M409.557 1.73354L419 11.0948L419 213.372L409.557 222.733L10.4427 222.733L1 213.372L1.00022 11.0946L10.4429 1.7334L409.557 1.73354Z" stroke="#FFC734" stroke-width="2"/>
@@ -45,9 +45,9 @@
     </picture>
   </div>
   <div class="product-info">
-    <h2><a href="../../pages/product/product.hbs">{{title}}</a></h2>
+    <h2>{{title}}</h2>
     {{> "money/money" count=summ sale=sale}}
-    <a class="button-yellow" data-popup="confirm">
+    <button class="button-yellow" data-popup="confirm">
       <svg width="77" height="30" viewBox="0 0 77 30" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M0 5.36753L0 23.774L0.0697037 23.705L5.56419 29.1415L71.4358 29.1416L76.9303 23.7051L77 23.7741V5.36761L76.9303 5.43658L71.4358 7.80931e-05L5.56419 0L0.0697037 5.4365L0 5.36753Z" fill="#FFC734"/>
       </svg>
@@ -55,6 +55,6 @@
         <path d="M0 7.3936L0 32.7479L0.0960146 32.6529L7.66449 40.1415L138.401 40.1416L145.969 32.653L146.065 32.748V7.39371L145.969 7.48871L138.401 0.000107571L7.66449 0L0.0960146 7.4886L0 7.3936Z" fill="#FFC734"/>
       </svg>
       <p>Купить</p>
-    </a>
+    </button>
   </div>
-</div>
+</a>

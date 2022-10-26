@@ -6,6 +6,7 @@
   height: 222px;
   background-image: url(../../assets/img/products/product.svg);
   background-size: 100% 100%;
+  text-decoration: none;
   & .product-img-bought {
     display: none;
     position: absolute;
@@ -94,7 +95,7 @@
     background-image: url(../../assets/img/products/product-xs.svg);
     width: 350px;
     height: 164px;
-    &:hover {
+    &:hover:not(.not-hover) {
       background-image: url(../../assets/img/products/product-xs-active.svg);
     }
   }
@@ -128,12 +129,9 @@
       font-size: 31px;
       line-height: 88.6%;
       color: #f5e3cc;
+      text-decoration: none;
       @media (max-width: 650px) {
         font-size: 28px;
-      }
-      & a {
-        color: inherit;
-        text-decoration: none;
       }
     }
     & .money {
@@ -153,6 +151,7 @@
     }
 
     & .button-yellow {
+      text-decoration: none;
       text-transform: none;
       padding: 16px 35px 18px;
       font-weight: 500;
