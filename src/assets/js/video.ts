@@ -8,12 +8,11 @@ export default function startVideo() {
       }
     });
     videoEl.addEventListener('canplaythrough', (e) => {
-      console.log('video loaded');
-      console.log(videoEl.playing);
       if (!videoEl.playing) {
         videoEl.play();
-        console.log('on play');
       }
+    },{once: true})
+    videoEl.addEventListener('play', () => {
       videoEl.classList.add('show');
     },{once: true})
   }

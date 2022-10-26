@@ -45,7 +45,7 @@
       min-width: 100vw;
       height: 100%;
       opacity: 0;
-      transition: 0.1;
+      transition: 0.1s;
       object-fit: cover;
       &.show {
         opacity: 1;
