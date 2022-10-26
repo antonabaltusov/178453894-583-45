@@ -154,9 +154,15 @@
       flex-direction: column;
       padding-top: 1.875em;
       display: flex;
+      @media (max-width: 810px) {
+        padding-top: 54px;
+      }
     }
     &-balance .flex-1 {
       padding-top: 1.5em;
+      @media (max-width: 810px) {
+        padding-top: 54px;
+      }
       @media (max-width: 1000px) {
         padding-right: 0;
       }
@@ -168,7 +174,7 @@
     & .history-balance {
       margin-top: 3.5em;
       @media (max-width: 810px) {
-        margin: 65px -10px 0;
+        margin: 138px -10px 0;
       }
       &__name-block {
         display: flex;
