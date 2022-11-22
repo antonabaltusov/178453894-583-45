@@ -24,6 +24,11 @@
   {{else}}
     {{> "link/link" text="Поддержка" link=""}}
   {{/if}}
+  {{#if page-contacts }}
+    {{> "link/link" text="Контакты" link="../../pages/contacts/contacts.hbs" class='active'}}
+  {{else}}
+    {{> "link/link" text="Контакты" link="../../pages/contacts/contacts.hbs"}}
+  {{/if}}
   <div hidden>
   {{> "link/link" text="lk" link="../../pages/profile/profile-second.hbs"}}
 

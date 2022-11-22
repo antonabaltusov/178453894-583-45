@@ -10,6 +10,8 @@
 @import '../pages/index/style.scss';
 @import '../pages/product/style.scss';
 @import '../pages/auth/style.scss';
+@import '../pages/legal/style.scss';
+@import '../pages/contacts/style.scss';
 
 @import '../partials/input/style.scss';
 @import '../partials/input-balance/style.scss';
