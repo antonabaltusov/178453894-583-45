@@ -93,20 +93,20 @@
   @media (max-width: 450px) {
     & .img-wrapper {
       width: 348px;
-      height: 196.69565px;
+      height: 144px;
       background-size: 0;
     }
     & .news-img {
       &__center {
-        background-size: 348px 196.69565px;
+        background-size: 348px 144px;
       }
       &__left,
       &__right {
-        background-size: 348px 196.69565px;
+        background-size: 348px 144px;
         &-top, 
         &-bottom {
           &::after {
-            background-size: 348px 196.69565px;
+            background-size: 348px 144px;
           }
         }
       }
