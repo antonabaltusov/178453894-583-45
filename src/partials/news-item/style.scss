@@ -98,16 +98,28 @@
     }
     & .news-img {
       &__center {
-        background-size: 348px 144px;
+        background-size: 348px 196.69565px;
       }
       &__left,
       &__right {
-        background-size: 348px 144px;
+        background-size: 348px 196.69565px;
         &-top, 
         &-bottom {
           &::after {
-            background-size: 348px 144px;
+            background-size: 348px 196.69565px;
           }
+        }
+      }
+      &__left-bottom,
+      &__right-bottom {
+        &::after {
+          background-position-y: calc((144px - 196.69565px)/2);
+        }
+      }
+      &__left-top,
+      &__right-top {
+        &::after {
+          background-position-y: calc((196.69565px - 144px)/2 + 43.8406px);
         }
       }
     }
