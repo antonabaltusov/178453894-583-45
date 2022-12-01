@@ -762,20 +762,20 @@
         }
         & .img-wrapper {
           width: 278px;
-          height: 224px;
+          height: 162.218923px;
           background-size: 0;
         }
         & .news-img {
           &__center {
-            background-size: 278px 224px;
+            background-size: 278px 162.218923px;
           }
           &__left,
           &__right {
-            background-size: 278px 224px;
+            background-size: 278px 162.218923px;
             &-top, 
             &-bottom {
               &::after {
-                background-size: 278px 224px;
+                background-size: 278px 162.218923px;
               }
             }
           }
