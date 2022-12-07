@@ -26,9 +26,59 @@ body {
     width: 94px;
     height: 88px;
   }
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 65%;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 30px;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: linear-gradient(to right, black, rgba(0, 0, 0, 0));
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 30px;
+      top: 0;
+      right: 0;
+      z-index: 10;
+      background: linear-gradient(to left, black, rgba(0, 0, 0, 0));
+    }
+  }
+  &__heroy {
+    position: absolute;
+    left: 83px;
+    top: 17px;
+    width: 472px;
+    height: 750px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    height: 400px;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+    z-index: 40;
+    background: linear-gradient(rgba(0, 0, 0, 0) 0%, black 80%);
+  }
 }
 .news-list {
   display: flex;
+  position: relative;
+  z-index: 50;
 }
 .news-item {
   color: #f5e3cc;
