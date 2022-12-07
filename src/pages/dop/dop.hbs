@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=1000, user-scalable=0"/>
+    <title>loadscreen</title>
+    <link rel="stylesheet" href="./style.scss" />
+    <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml" />
+    <script type="module" src="../../assets/js/index.ts"></script>
+  </head>
+  <body>
+    <main class="loadscreen">
+      <img class="logo" src="../../assets/img/Logo_fullcolor1.svg" alt="логотип">
+        <div class="news-list">
+          {{> "news-item-dop/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union.png" title="Ваши Герои" itemDate="22 / 03 / 2022" desription="Особенности боевой системы" }}
+          {{> "news-item-dop/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union-2.png" title="Ваши противники" itemDate="22 / 03 / 2022" desription="Вы столкнетесь с опасными существами — посмотрим на них повнимательнее" }}
+          {{> "news-item-dop/news-item" link="../../pages/article/article.hbs" imgSrc="../../assets/img/news/Union-3.png" title="Ваш город" itemDate="22 / 03 / 2022" desription="Первый взгляд на экран поселения и знакомство с Мастерами" }}
+        </div>
+    </main>
+  </body>
+</html>
