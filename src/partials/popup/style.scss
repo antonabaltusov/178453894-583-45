@@ -1,23 +1,23 @@
 .popup {
+  transform: scale(0.75);
+  transform-origin: top;
   padding: 74px 20px;
   z-index: 900;
-  position: fixed;
-  transform: translateX(-50%);
-  top: calc((100vh - 720px)/2);
-  left: 50%;
   height: fit-content;
-  max-height: 720px;
   width: 90%;
   max-width: 875px;
   background-image: url(../../assets/img/popup/popup-bg.png);
   background-size: 100% 100%;
   display: none;
   @media (max-width: 1200px) {
-    transform: translateX(-50%) translateY(-50%);
-    top: 50%;
-    max-height: 95vh;
   }
-  &  ~ .overlay {
+  &-overlay {
+    padding-top: 50px;
+    @media (max-width: 1200px) {
+      padding-top: calc(50 / 1900 * 100%);
+    }
+
+    padding-bottom: 30px;
     display: none;
     z-index: 899;
     position: fixed;
@@ -27,14 +27,16 @@
     height: 100vh;
     background: rgba(14, 14, 18, 0.68);
     backdrop-filter: blur(18px);
-  }
-  &.active {
-    display: block;
-    & ~ .header {
-      z-index: 0;
-    }
-    & ~ .overlay {
-      display: block;
+    overflow-y: auto;
+    justify-content: center;
+    &.active {
+      display: flex;
+      & ~ .header {
+        z-index: 0;
+      }
+      & .popup {
+        display: block;
+      }
     }
   }
   &.sing-in {
