@@ -1,6 +1,4 @@
 .popup {
-  transform: scale(0.75);
-  transform-origin: top;
   padding: 74px 20px;
   z-index: 900;
   height: fit-content;
@@ -40,6 +38,8 @@
     }
   }
   &.sing-in {
+    transform: scale(0.75);
+    transform-origin: top;
     & .auth-form {
       display: flex;
     }
