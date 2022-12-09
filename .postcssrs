@@ -1,6 +1,5 @@
 {
   "plugins": {
-    "autoprefixer": true,
     "postcss-import": true,
     "postcss-mixins": true,
     "postcss-simple-vars": true,

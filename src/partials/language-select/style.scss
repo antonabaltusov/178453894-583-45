@@ -1,0 +1,114 @@
+.language-select {
+  align-self: flex-start;
+  margin-top: 12%;
+  position: relative;
+  transition: all;
+  transition-duration: 0.4s;
+  &.active {
+    & .language-select-wrapper {
+      display: block;
+    }
+    & .language-select__item {
+      &.active {
+        & .language {
+          color: #FFC734;
+          & svg path {
+            fill: #FFC734;
+          }
+        }
+      }
+    }
+  }
+  &__list {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+    z-index: 20;
+  }
+  &__item {
+    &:not(.active) {
+      & svg {
+        display: none;
+      }
+    }
+  }
+  &-wrapper {
+    display: none;
+    z-index: 19;
+    position: absolute;
+    top: -26px;
+    bottom: -26px;
+    left: -23px;
+    right: -23px;
+    background-color: #000;
+    padding-right: 10px;
+    padding-left: 10px;
+    overflow: hidden;
+    &-main {
+      height: 100%;
+      width: 100%;
+      border-top: 1px solid #635C4C;
+      border-bottom: 1px solid #635C4C;
+      position: relative;
+      z-index: 20;
+    }
+    &-left,
+    &-right {
+      width: 10px;
+      top: 10px;
+      bottom: 10px;
+      position: absolute;
+      background-color: #000;
+      &::after,
+      &::before {
+        content: '';
+        height: 15px;
+        width: 15px;
+        position: absolute;
+        background-color: #000;
+      }
+      &::after {
+        bottom: 100%;
+      }
+      &::before {
+        top: 100%;
+      }
+    }
+    &-left {
+      border-left: 1px solid #635C4C;
+      left: 0;
+      &::after,
+      &::before {
+        left: -1px;
+        border-left: 1px solid #635C4C;
+      }
+      &::after {
+        transform-origin: left bottom;
+        transform: rotate(45deg);
+      }
+      &::before {
+        transform-origin: left top;
+        transform: rotate(-45deg);
+      }
+    }
+    &-right {
+      border-right: 1px solid #635C4C;
+      right:0;
+      &::after,
+      &::before {
+        right: -1px;
+        border-right: 1px solid #635C4C;
+      }
+      &::after {
+        transform-origin: right bottom;
+        transform: rotate(-45deg);
+      }
+      &::before {
+        transform-origin: right top;
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

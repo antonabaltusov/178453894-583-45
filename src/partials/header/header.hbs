@@ -8,7 +8,7 @@
       {{> "header-nav/header-nav" }}
     </div>
     <div class="header-item">
-      {{> "language/language" text="ru"}}
+      {{> "language-select/language-select"}}
       {{#if auth }}
       {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png"}}
       {{> "money/money" count="9999"}}
@@ -39,22 +39,26 @@
     </div>
   </div>
   <div class="mobile-menu-main">
-    <div>
-      {{#if auth }}
-        {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png"}}
-        <div class="user-info">
-          <div class="user-info__name">
-            <p>Mellosa<br>morgenstern</p>
-          </div>
-          <div class="user-info__id"><p><span>id</span> 1364622</p></div>
+    <div class="mobile-menu-main__wrap">
+      <div class="mobile-menu-main__left">
+        <div>
+          {{#if auth }}
+            {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png"}}
+            <div class="user-info">
+              <div class="user-info__name">
+                <p>Mellosa<br>morgenstern</p>
+              </div>
+              <div class="user-info__id"><p><span>id</span> 1364622</p></div>
+            </div>
+          {{else}}
+            {{> "button-singin/button-singin" text="войти" link="../../pages/auth/auth.hbs"}}
+          {{/if}}
         </div>
-      {{else}}
-        {{> "button-singin/button-singin" text="войти" link="../../pages/auth/auth.hbs"}}
-      {{/if}}
-    </div>
-    <div>
-      {{> "header-nav/header-nav" }}
-      
+        {{> "language-select/language-select"}}
+      </div>
+      <div>
+        {{> "header-nav/header-nav" }}
+      </div>
     </div>
   </div>
 </header>

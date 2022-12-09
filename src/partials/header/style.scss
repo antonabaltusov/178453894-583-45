@@ -97,8 +97,15 @@
       background-color: black;
       z-index: 400;
       padding: 127px 13.589744vw 10px 7.435897vw;
-      display: flex;
-      justify-content: space-between;
+      &__wrap {
+        display: flex;
+        justify-content: space-between;
+      }
+      &__left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
       & .header-nav {
         transition: 0.3s;
         margin: 0;
@@ -159,6 +166,7 @@
       display: flex;
       position: relative;
       z-index: 800;
+      
     }
   }
   &.open-mobile-menu {

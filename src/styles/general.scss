@@ -180,3 +180,19 @@ button:hover {
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
+.select {
+  &-wrap {
+    &:not(.active) {
+      & .select-item:not(.active) {
+      display: none;
+    }}
+  }
+  &-item {
+    &.active {
+      order: 0;
+    }
+    &:not(.active) {
+      order: 1;
+    }
+  }
+}

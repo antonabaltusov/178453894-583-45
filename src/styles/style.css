@@ -17,6 +17,7 @@
 @import '../partials/input-balance/style.scss';
 @import '../partials/link/style.scss';
 @import '../partials/language/style.scss';
+@import '../partials/language-select/style.scss';
 @import '../partials/avatar/style.scss';
 @import '../partials/money/style.scss';
 @import '../partials/notifications/style.scss';
@@ -33,5 +34,7 @@
 @import '../partials/popup/style.scss';
 @import '../partials/auth-form/style.scss';
 @import '../partials/confirm/style.scss';
+@import '../partials/pay-card__item/style.scss';
+@import '../partials/choose-region/style.scss';
 
 @import '../assets/js/swiper/swiper-bundle.min.css'

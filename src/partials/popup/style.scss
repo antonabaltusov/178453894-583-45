@@ -46,7 +46,7 @@
   }
   &.confirm {
     background-image: url(../../assets/img/popup/popup-bg-small.png);
-    & .confirm-block:not(.not-money-block) {
+    & .confirm-block:not(.not-money-block):not(.how-pay):not(.sing-in) {
       display: flex;
     }
     @media (max-width: 810px) {
@@ -55,6 +55,20 @@
   }
   &.not-money {
     & .not-money-block {
+      display: flex;
+    }
+  }
+  &.how-pay {
+    padding-top: 55px;
+    padding-left: 55px;
+    padding-right: 55px;
+    & .how-pay {
+      display: flex;
+    }
+  }
+  &.sing-in-warn {
+    padding-bottom: 50px;
+    & .confirm-block.sing-in {
       display: flex;
     }
   }

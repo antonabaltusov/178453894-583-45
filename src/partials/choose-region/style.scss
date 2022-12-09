@@ -1,0 +1,127 @@
+.choose-region {
+  width: fit-content;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding-right: 8px;
+  padding-left: 8px;
+  overflow: hidden;
+  
+  &__name {
+    font-weight: 400;
+    font-size: 19px;
+    line-height: 130%;
+    color: #635C4C;
+    padding-right: 19px;
+  }
+  &-content {
+    background-color: #140E13;
+    border-top: 1px solid #635C4C;
+    border-bottom: 1px solid #635C4C;
+    height: 100%;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 11px;
+    padding-left: 20px;
+    padding-right: 10px;
+  }
+  &__select {
+    padding-top: 1px;
+    margin-top: 2px;
+    border-left: 1px solid #635C4C;
+    height: fit-content;
+    padding-left: 19px;
+    width: 95px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    margin-bottom: 12px;
+    gap: 20px;
+  }
+  &__option {
+    display: flex;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 88.6%;
+    color: #635C4C;
+    &.active,
+    &:hover {
+      color: #FFC734;
+      cursor: pointer;
+    }
+  }
+  &__button {
+    margin-top: 7px;
+    padding: 0;
+    height: 0;
+    width: 0;
+    background-color: transparent;
+    border-width: 7px 7px;
+    border-style: solid;
+    border-color: transparent #FFC734 #FFC734 transparent;
+    transform-origin: top right;
+    transform: rotate(45deg);
+    &:hover {
+      border-color: transparent #F2A000 #F2A000 transparent;
+    }
+  }
+  &-left,
+  &-right {
+    width: 8px;
+    top: 8px;
+    bottom: 8px;
+    position: absolute;
+    background-color: #140E13;
+    &::after,
+    &::before {
+      content: '';
+      height: 15px;
+      width: 15px;
+      position: absolute;
+      background-color: #140E13;
+    }
+    &::after {
+      bottom: 100%;
+    }
+    &::before {
+      top: 100%;
+    }
+  }
+  &-left {
+    border-left: 1px solid #635C4C;
+    left: 0;
+    &::after,
+    &::before {
+      left: -1px;
+      border-left: 1px solid #635C4C;
+    }
+    &::after {
+      transform-origin: left bottom;
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform-origin: left top;
+      transform: rotate(-45deg);
+    }
+  }
+  &-right {
+    border-right: 1px solid #635C4C;
+    right:0;
+    &::after,
+    &::before {
+      right: -1px;
+      border-right: 1px solid #635C4C;
+    }
+    &::after {
+      transform-origin: right bottom;
+      transform: rotate(-45deg);
+    }
+    &::before {
+      transform-origin: right top;
+      transform: rotate(45deg);
+    }
+  }
+}

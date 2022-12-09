@@ -1,0 +1,12 @@
+<div class="confirm-block how-pay">
+  <div class="how-pay__top">
+    <h2>Xsolla</h2>
+    {{>"choose-region/choose-region"}}
+  </div>
+  <div class="pay-card__list">
+    {{> "pay-card__item/pay-card__item" img="../../assets/img/pay-cards/qiwi.svg" commission="10 руб + 3%"}}
+    {{> "pay-card__item/pay-card__item" img="../../assets/img/pay-cards/tinkoff.svg" commission="3%"}}
+    {{> "pay-card__item/pay-card__item" img="../../assets/img/pay-cards/moneta.svg" commission="нет"}}
+    {{> "pay-card__item/pay-card__item" img="../../assets/img/pay-cards/bank.svg" commission="1%" text="Bank card" message="(Оплаты через Сбербанк, Альфа-банк и ВТБ временно не поддерживаются)"}}
+  </div>
+</div>
