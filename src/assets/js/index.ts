@@ -25,6 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
   popupFunc();
   productHover();
   selectList();
+  promocode();
 });
 const onLoad = () => {
   cookies();
@@ -40,5 +41,33 @@ function cookies() {
         cookiesBlock.classList.remove("active");
       });
     cookiesBlock.classList.add("active");
+  }
+}
+
+function promocode() {
+  const promoBlock = document.querySelector(".promocode");
+  if (promoBlock) {
+    const btn = promoBlock.querySelector(".promocode-btn");
+    const input = promoBlock.querySelector("input") as HTMLInputElement;
+    btn?.addEventListener("click", () => {
+      if (input?.value.length) {
+        if (
+          !promoBlock.classList.contains("success") &&
+          !promoBlock.classList.contains("error")
+        ) {
+          promoBlock.classList.add("success");
+        } else {
+          if (promoBlock.classList.contains("success")) {
+            promoBlock.classList.remove("success");
+            promoBlock.classList.add("error");
+          } else {
+            if (promoBlock.classList.contains("error")) {
+              promoBlock.classList.remove("error");
+              promoBlock.classList.add("success");
+            }
+          }
+        }
+      }
+    });
   }
 }

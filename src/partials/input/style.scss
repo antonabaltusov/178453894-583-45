@@ -114,7 +114,7 @@
       color: #ffe6a1;
     }
   }
-  &:hover {
+  &:not(.active):hover {
     border-color: #a08c5f;
     color: #a08c5f;
     cursor: pointer;
