@@ -5,7 +5,6 @@
   border-bottom: 1px solid #635c4c;
   color: #635c4c;
 
-  
   & input::-webkit-input-placeholder {
     color: #635c4c;
   }
@@ -95,11 +94,32 @@
     }
   }
   &.active {
-    border-color: #a08c5f;
-    color: #a08c5f;
+    border-color: #ffe6a1;
+    color: #ffe6a1;
     & label {
       margin-right: -2px;
       border: none;
+    }
+    & input {
+      color: #ffe6a1;
+    }
+    & :not(.button-singin) * {
+      border-color: #ffe6a1;
+      color: #ffe6a1;
+    }
+    & input::-webkit-input-placeholder {
+      color: #ffe6a1;
+    }
+    & input::-moz-placeholder {
+      color: #ffe6a1;
+    }
+  }
+  &:hover {
+    border-color: #a08c5f;
+    color: #a08c5f;
+    cursor: pointer;
+    & label {
+      border-color: #a08c5f;
     }
     & input {
       color: #a08c5f;

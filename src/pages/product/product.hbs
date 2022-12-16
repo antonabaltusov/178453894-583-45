@@ -17,19 +17,40 @@ page-shop: 'true'
         <img src="../../assets/img/products/poduct-page.png" alt="">
       </div>
     <div class="product-page__info">
-      <h1>Легендарный меч</h1>
-      <p>Лучший легендарный меч 80 уровня в игре</p>
-      <div class="product-page__img only-mobile">
-        <img src="../../assets/img/products/poduct-page.png" alt="">
-      </div>
-      {{> "money/money" count="9999" }}
-      <a class="button-yellow" {{#if link}} href="{{link}}" {{/if}} data-popup="confirm">
-        <svg width="173" height="59" viewBox="0 0 173 59" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M0.0656441 7.20715C0.0413079 7.18307 0 7.20031 0 7.23455L0 51.542C0 51.5763 0.0413062 51.5935 0.0656436 51.5694C0.0806606 51.5546 0.104838 51.5546 0.119854 51.5694L5.9427 57.3308C6.87881 58.257 8.14253 58.7765 9.45942 58.7765L162.999 58.7766C164.316 58.7766 165.58 58.2571 166.516 57.3309L172.339 51.5695C172.354 51.5547 172.378 51.5547 172.393 51.5695C172.417 51.5936 172.459 51.5764 172.459 51.5421V7.23467C172.459 7.20042 172.417 7.18317 172.393 7.20725C172.378 7.22211 172.354 7.22211 172.339 7.20725L166.516 1.44587C165.58 0.519635 164.316 0.000103426 162.999 0.000102558L9.45944 1.35489e-06C8.14254 4.86879e-07 6.87881 0.519528 5.9427 1.44576L0.119856 7.20715C0.104839 7.22201 0.0806605 7.22201 0.0656441 7.20715Z" fill="#FFC734"/>
+      <svg class="product-page__info-svg" preserveAspectRatio="none" width="549" height="9" viewBox="0 0 549 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M534.393 5.73975L14.2675 5.73972V3.61472L534.393 3.61475V5.73975Z" fill="#635C4C"/>
+        <path d="M12.1241 8.92722L0.922852 4.46365L12.1241 7.62939e-05L16.454 4.46365L12.1241 8.92722Z" fill="#635C4C"/>
+        <path d="M536.9 8.92725L548.101 4.46368L536.9 0.000104904L532.57 4.46368L536.9 8.92725Z" fill="#635C4C"/>
+      </svg>
+      <div class="product-page__info-main">
+      <div class="sale-date">
+        <svg preserveAspectRatio="none" width="83" height="42" viewBox="0 0 83 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M0.125 0.86084H82.7295V27.9558L41.4272 41.1391L0.125 27.9558V0.86084Z" fill="url(#paint0_linear_1503_492)"/>
+          <defs>
+          <linearGradient id="paint0_linear_1503_492" x1="40.3792" y1="0.860858" x2="40.3792" y2="42.3037" gradientUnits="userSpaceOnUse">
+          <stop stop-color="#FF8E25"/>
+          <stop offset="0.421875" stop-color="#973600"/>
+          <stop offset="1" stop-color="#F59E37"/>
+          </linearGradient>
+          </defs>
         </svg>
+        <p>скидка до</p>
+        <span>31.12</span>
+      </div>
+        <h1>Легендарный меч</h1>
+        <p>Лучший легендарный меч 80 уровня в игре</p>
+        <div class="product-page__img only-mobile">
+          <img src="../../assets/img/products/poduct-page.png" alt="">
+        </div>
+        {{> "money/money" count="9999" }}
+        <a class="button-yellow" {{#if link}} href="{{link}}" {{/if}} data-popup="confirm">
+          <svg width="173" height="59" viewBox="0 0 173 59" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0.0656441 7.20715C0.0413079 7.18307 0 7.20031 0 7.23455L0 51.542C0 51.5763 0.0413062 51.5935 0.0656436 51.5694C0.0806606 51.5546 0.104838 51.5546 0.119854 51.5694L5.9427 57.3308C6.87881 58.257 8.14253 58.7765 9.45942 58.7765L162.999 58.7766C164.316 58.7766 165.58 58.2571 166.516 57.3309L172.339 51.5695C172.354 51.5547 172.378 51.5547 172.393 51.5695C172.417 51.5936 172.459 51.5764 172.459 51.5421V7.23467C172.459 7.20042 172.417 7.18317 172.393 7.20725C172.378 7.22211 172.354 7.22211 172.339 7.20725L166.516 1.44587C165.58 0.519635 164.316 0.000103426 162.999 0.000102558L9.45944 1.35489e-06C8.14254 4.86879e-07 6.87881 0.519528 5.9427 1.44576L0.119856 7.20715C0.104839 7.22201 0.0806605 7.22201 0.0656441 7.20715Z" fill="#FFC734"/>
+          </svg>
 
-        <p>Купить</p>
-      </a>
+          <p>Купить</p>
+        </a>
+      </div>
     </div>
 
     </div>
