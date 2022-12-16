@@ -36,5 +36,6 @@
 @import '../partials/confirm/style.scss';
 @import '../partials/pay-card__item/style.scss';
 @import '../partials/choose-region/style.scss';
+@import '../partials/cookies/style.scss';
 
 @import '../assets/js/swiper/swiper-bundle.min.css'

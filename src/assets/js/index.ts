@@ -12,8 +12,7 @@ import selectList from "./selectList";
 const windowWidth = document.documentElement.clientWidth;
 if (windowWidth < 390) {
   const viewport = document.querySelector("meta[name=viewport]");
-  viewport!.setAttribute('content', 'width=390, initial-scale=1');
-
+  viewport!.setAttribute("content", "width=390, initial-scale=1");
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -27,3 +26,19 @@ document.addEventListener("DOMContentLoaded", () => {
   productHover();
   selectList();
 });
+const onLoad = () => {
+  cookies();
+};
+window.onload = onLoad;
+function cookies() {
+  const cookiesBlock = document.querySelector(".cookies");
+
+  if (cookiesBlock) {
+    cookiesBlock
+      .querySelector(".cookies-btn")
+      ?.addEventListener("click", () => {
+        cookiesBlock.classList.remove("active");
+      });
+    cookiesBlock.classList.add("active");
+  }
+}
