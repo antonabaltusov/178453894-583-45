@@ -3,7 +3,6 @@
 .article {
   padding-top: 3.5em;
   padding-bottom: calc(4.895833vw + 90px);
-  overflow-x: hidden;
   &__with-img {
     display: grid;
     gap: 4.6%;
@@ -518,6 +517,14 @@
     display: flex;
     position: relative;
     margin: 30px 0 45px;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
+    & .container {
+      max-width: 861px;
+      padding: 0;
+    }
     @media (max-width: 1200px) {
       flex-direction: column;
     }
@@ -535,6 +542,8 @@
       top: 50%;
       transform: translateY(-50%);
       padding: 30px 0;
+      // overflow-x: hidden;
+      // overflow-y: visible;
       @media (max-width: 1200px) {
         position: relative;
         left: 0;
