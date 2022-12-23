@@ -3,6 +3,9 @@
   padding-top: 1.75em;
   & .container {
     padding: 0 30px;
+    @media (max-width: 810px) {
+      padding: 0 20px;
+    }
   }
   @media (max-width: 1000px) {
     padding-top: 124px;
@@ -54,21 +57,30 @@
       bottom: -2px;
       left: 0;
       width: 100%;
+      @media (max-width: 810px) {
+        bottom: 0;
+      }
     }
     & .flex-1 {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      flex-wrap: wrap;
       @media (max-width: 810px) {
         align-items: flex-start;
         margin-bottom: 36px;
+        flex-wrap: nowrap;
       }
     }
     & .switch-block {
       align-self: flex-end;
       &__button {
+        @media (max-width: 810px) {
+          padding-bottom: 0.9375rem;
+        }
+
         &:not(:last-child) {
-          margin-right: 0.9em;
+          padding-right: 0.9em;
         }
         position: relative;
         text-decoration: none;
@@ -85,6 +97,9 @@
             bottom: -0.9375rem;
             transform: translateX(-50%);
             left: 50%;
+            @media (max-width: 810px) {
+              bottom: 0;
+            }
           }
         }
       }
@@ -93,6 +108,10 @@
         width: 100%;
         justify-content: space-around;
         padding: 0 30px;
+        position: relative;
+        &::-webkit-scrollbar {
+          width: 0;
+        }
         &__button {
           &:not(:last-child) {
             margin-right: 0;
@@ -424,6 +443,268 @@
     & img {
       margin-right: 0;
       margin-bottom: 0.1em;
+    }
+  }
+}
+.quest {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 216px 1fr;
+  margin-top: 10px;
+  @media (max-width: 810px) {
+    position: relative;
+    grid-template-columns: 1fr;
+    margin-top: 35px;
+  }
+  &-list {
+    position: relative;
+    padding-top: 4px;
+    @media (max-width: 810px) {
+      padding-top: 7px;
+    }
+    &__bg {
+      border-radius: 5px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 346px;
+      @media (max-width: 810px) {
+        display: none;
+      }
+      &-xs {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 100% 100%;
+        @media (max-width: 810px) {
+          display: block;
+        }
+      }
+    }
+  }
+  &-buttons {
+    display: flex;
+    flex-direction: column;
+    @media (max-width: 810px) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+  &-button {
+    width: 100%;
+    height: 76px;
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 105.6%;
+    text-align: right;
+    color: #f5e3cc;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: transparent;
+    padding: 0 22px;
+    white-space: nowrap;
+    text-decoration: none;
+    position: relative;
+    @media (max-width: 810px) {
+      padding: 0;
+      width: 33%;
+      max-width: 114px;
+      height: 47px;
+      display: flex;
+      justify-content: center;
+      position: static;
+      & span {
+        display: none;
+      }
+      & b {
+        position: relative;
+      }
+    }
+    & svg {
+      position: relative;
+      display: none;
+      margin-right: 5px;
+      @media (max-width: 810px) {
+        display: block;
+      }
+    }
+    &__bg {
+      display: none;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      width: 100%;
+      height: 88px;
+      pointer-events: none;
+      background-size: 100% 100%;
+      @media (max-width: 810px) {
+        display: none;
+      }
+      &-xs {
+        transform: translateY(0);
+        top: 0;
+        display: none;
+        width: 100%;
+        height: 925px;
+        z-index: 0;
+      }
+    }
+    &.active,
+    &:hover {
+      color: #ffc734;
+    }
+    &.active {
+      & .quest-button__bg {
+        display: block;
+        @media (max-width: 810px) {
+          display: none;
+        }
+        &-xs {
+          display: none;
+          @media (max-width: 810px) {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+  &-item {
+    display: flex;
+    padding: 25px 0 22px;
+    margin: 0 35px;
+    border-bottom: 1px solid #635c4c;
+    gap: 4%;
+    @media (max-width: 810px) {
+      margin: 0 20px;
+      flex-direction: column;
+      padding: 30px 0 10px;
+    }
+    &__info {
+      color: #f5e3cc;
+      width: 63%;
+      @media (max-width: 810px) {
+        width: 100%;
+      }
+    }
+    &__name {
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 105.6%;
+    }
+    &__descr {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 99.6%;
+      margin-top: 5px;
+      @media (max-width: 810px) {
+        margin-top: 10px;
+      }
+    }
+    &__goal {
+      margin-top: 25px;
+      height: 25px;
+      display: flex;
+      align-items: center;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: #ffffff;
+      padding: 1px 9.5px 0 15px;
+      position: relative;
+      width: fit-content;
+      @media (max-width: 810px) {
+        margin-top: 10px;
+      }
+      &-right,
+      &-left,
+      &-center {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        width: 10px;
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+      }
+      &-left {
+        left: 0;
+        background-image: url(../../assets/img/quest/left.svg);
+      }
+      &-right {
+        right: 0;
+        background-image: url(../../assets/img/quest/right.svg);
+      }
+      &-center {
+        width: auto;
+        left: 9px;
+        right: 9px;
+        background-color: #004313;
+      }
+      & p {
+        position: relative;
+      }
+    }
+    &__status {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      color: #ffffff;
+      flex: 1;
+      &-text {
+        margin: 37px 12px 0 auto;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        text-align: right;
+        color: #948d7e;
+        & small {
+          display: block;
+          font-size: 15px;
+          color: #635c4c;
+          @media (max-width: 810px) {
+          }
+        }
+        @media (max-width: 810px) {
+          text-align: left;
+          margin: 10px 0 0;
+        }
+      }
+    }
+    &__button {
+      margin: 37px auto 0;
+      display: block;
+      position: relative;
+      background-color: transparent;
+      padding: 10px 15px 9px;
+      border: none;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 88.6%;
+      text-align: center;
+      color: #000000;
+      @media (max-width: 810px) {
+        margin: 10px 0 0;
+      }
+      & span {
+        position: relative;
+      }
+      & svg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      &:hover {
+        & svg path {
+          fill: #f2a000;
+        }
+      }
     }
   }
 }
