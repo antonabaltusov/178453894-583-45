@@ -50,6 +50,7 @@
     }
     @media (max-width: 810px) {
       flex-direction: column;
+      padding-bottom: 0;
     }
     &-border {
       transform: translateY(50%);

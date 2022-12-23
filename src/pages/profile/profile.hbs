@@ -37,7 +37,11 @@ auth: 'true'
       </div>
     </div>
     <div class="profile__head  only-mobile">
-      
+      <svg  class="profile__head-border" width="340" height="10" viewBox="0 0 340 10" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M325.571 6.27612L14.0666 6.27612V4.15112L325.571 4.15112V6.27612Z" fill="#635C4C"/>
+            <path d="M11.9232 9.46362L0.721952 5.00005L11.9232 0.536477L16.2531 5.00005L11.9232 9.46362Z" fill="#635C4C"/>
+            <path d="M328.077 9.46362L339.278 5.00005L328.077 0.536484L323.747 5.00005L328.077 9.46362Z" fill="#635C4C"/>
+          </svg>
       <div class="flex-1">
       <div class="profile__avatar">
         {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png" disabled="true"}}
@@ -74,11 +78,7 @@ auth: 'true'
           <a class="switch-block__button" href="../profile/profile-balance.hbs">Баланс</a>
           <a class="switch-block__button" href="../profile/profile-promo.hbs">Промокоды</a>
           <a class="switch-block__button" href="../profile/profile-quest.hbs">Квесты</a>
-          <svg  class="profile__head-border" width="340" height="10" viewBox="0 0 340 10" fill="none" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd" clip-rule="evenodd" d="M325.571 6.27612L14.0666 6.27612V4.15112L325.571 4.15112V6.27612Z" fill="#635C4C"/>
-            <path d="M11.9232 9.46362L0.721952 5.00005L11.9232 0.536477L16.2531 5.00005L11.9232 9.46362Z" fill="#635C4C"/>
-            <path d="M328.077 9.46362L339.278 5.00005L328.077 0.536484L323.747 5.00005L328.077 9.46362Z" fill="#635C4C"/>
-          </svg>
+          
         </div>
     </div>
     <div class="profile__general">
