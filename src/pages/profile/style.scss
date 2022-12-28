@@ -609,14 +609,13 @@
     }
     &__goal {
       margin-top: 25px;
-      height: 25px;
       display: flex;
       align-items: center;
       font-weight: 400;
       font-size: 16px;
       line-height: 130%;
       color: #ffffff;
-      padding: 1px 9.5px 0 15px;
+      padding: 3px 9.5px 3px 15px;
       position: relative;
       width: fit-content;
       @media (max-width: 810px) {
@@ -626,21 +625,54 @@
       &-left,
       &-center {
         position: absolute;
-        height: 100%;
-        top: 0;
         width: 10px;
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
+       
+      }
+      &-right,
+      &-left {
+        top: 9px;
+        bottom: 9px;
+        background-color: #004313;
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          right: 0;
+          left: 0;
+          height: 10px;
+          background-repeat: no-repeat;
+          background-size: 100% 100%;
+        }
+        &::before {
+          top: -9px;
+        }
+        &::after {
+          bottom: -9px;
+        }
       }
       &-left {
         left: 0;
-        background-image: url(../../assets/img/quest/left.svg);
+        &::before{
+          background-image: url(../../assets/img/quest/left.svg);
+        }
+        &::after {
+         background-image: url(../../assets/img/quest/right.svg);
+         transform: scale(-1,-1);
+        }
       }
       &-right {
         right: 0;
-        background-image: url(../../assets/img/quest/right.svg);
+        &::before{
+          background-image: url(../../assets/img/quest/right.svg);
+        }
+        &::after {
+         background-image: url(../../assets/img/quest/left.svg);
+         transform: scale(-1,-1);
+        }
       }
       &-center {
+        height: 100%;
+        top: 0;
         width: auto;
         left: 9px;
         right: 9px;
