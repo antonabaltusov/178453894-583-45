@@ -1,0 +1,102 @@
+@import "../../styles/reset.css";
+@import "../../styles/fonts.css";
+body {
+  background-color: black;
+  margin: 0;
+  font-family: "Alegreya";
+  color: #f5e3cc;
+  text-align: center;
+}
+.auth-screen {
+  background-color: black;
+  padding: 0;
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+  margin: auto;
+  &__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 787px;
+    max-height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &::before {
+      position: absolute;
+      content: "";
+      height: 100%;
+      width: 100%;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background: linear-gradient(180deg, rgba(20, 9, 8, 0.26) 0%, #000 100%);
+    }
+  }
+  &__content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 79px;
+    z-index: 15;
+  }
+  & .logo {
+    width: 175px;
+    height: 163px;
+    object-fit: contain;
+    object-position: center;
+  }
+  &__icon {
+    margin-top: 77px;
+  }
+  & h1,
+  h2 {
+    line-height: 102.1%;
+    font-weight: 500;
+  }
+  & h1 {
+    margin-top: 27px;
+    font-size: 36px;
+  }
+  & h2 {
+    margin-top: 21px;
+    font-size: 27px;
+  }
+  & a {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 88.6%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #ffe6a1;
+    padding: 12px 26px;
+    margin-top: 36px;
+    position: relative;
+    & span {
+      position: relative;
+    }
+    & svg {
+      position: absolute;
+      top: -9;
+      left: -9;
+      width: calc(100% + 18px);
+      height: calc(100% + 18px);
+    }
+    &:hover {
+      color: black;
+      & svg {
+        & path {
+          stroke: #ffc734;
+          fill: #ffc734;
+        }
+      }
+    }
+  }
+}
