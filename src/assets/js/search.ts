@@ -22,9 +22,7 @@ export default function search() {
     searcList.forEach((el) => {
       if (el.value?.toLowerCase().includes(value.toLowerCase())) {
         el.element.hidden = false;
-        console.log(1);
       } else {
-        console.log(2);
         el.element.hidden = true;
       }
     });

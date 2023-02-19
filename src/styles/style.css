@@ -13,6 +13,7 @@
 @import '../pages/legal/style.scss';
 @import '../pages/contacts/style.scss';
 @import '../pages/not-found/style.scss';
+@import '../pages/liderbord/style.scss';
 
 @import '../partials/input/style.scss';
 @import '../partials/input-balance/style.scss';
@@ -38,5 +39,7 @@
 @import '../partials/pay-card__item/style.scss';
 @import '../partials/choose-region/style.scss';
 @import '../partials/cookies/style.scss';
+@import '../partials/liderbord-main/style.scss';
+@import '../partials/liderbord-table/style.scss';
 
 @import '../assets/js/swiper/swiper-bundle.min.css'

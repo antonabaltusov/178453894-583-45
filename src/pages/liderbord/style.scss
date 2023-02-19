@@ -1,0 +1,288 @@
+.liderbord {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  @media (max-width: 900px) {
+    padding-top: 100px;
+  }
+  @media (max-width: 400px) {
+    padding-bottom: 130px;
+  }
+  & h1 {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 88.6%;
+    text-transform: uppercase;
+    color: #f5e3cc;
+    @media (max-width: 1000px) {
+      font-size: 33px;
+      line-height: 105.6%;
+    }
+  }
+  &-header {
+    min-height: 215px;
+    background-position: 10% 50%;
+    background-size: cover;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &.auth {
+      min-height: 421px;
+    }
+    @media (max-width: 1000px) {
+      min-height: 190px;
+      padding: 20px;
+      & .container {
+        padding: 0;
+      }
+      &.auth {
+        min-height: 190px;
+      }
+    }
+    @media (max-width: 400px) {
+      min-height: 0;
+      padding-top: 29px;
+      padding-bottom: 25px;
+      &.auth {
+        min-height: 0;
+        padding-top: 29px;
+        padding-bottom: 28px;
+      }
+    }
+    &--common {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: 400px) {
+        flex-direction: column;
+        gap: 17px;
+      }
+    }
+    &__go-auth {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+      padding-right: 40px;
+      @media (max-width: 1000px) {
+        gap: 12px;
+        padding-right: 0;
+      }
+      @media (max-width: 400px) {
+        flex-direction: column;
+      }
+      & p {
+        font-weight: 400;
+        font-size: 22px;
+        line-height: 99.6%;
+        text-align: right;
+        color: #ffe1c1;
+        @media (max-width: 400px) {
+          text-align: center;
+        }
+        @media (max-width: 1000px) {
+          font-size: 18px;
+          line-height: 1;
+        }
+      }
+      & .liderbord-btn {
+        width: 172px;
+        height: 36px;
+        background-color: transparent;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+        display: flex;
+        position: relative;
+        & svg {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+        &:hover {
+          & svg path {
+            fill: #f2a000;
+          }
+        }
+        & span {
+          text-align: center;
+          color: #333240;
+          z-index: 10;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 88.6%;
+          text-transform: uppercase;
+        }
+      }
+    }
+    &--auth {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-right: 55px;
+      margin-top: 63px;
+      @media (max-width: 1200px) {
+        padding-right: 32px;
+      }
+      @media (max-width: 1000px) {
+        margin-top: 17px;
+      }
+      @media (max-width: 400px) {
+        flex-direction: column;
+        gap: 54px;
+      }
+    }
+    &__name {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 50px;
+      line-height: 88.6%;
+      text-transform: uppercase;
+      color: #ffffff;
+      @media (max-width: 1000px) {
+        font-size: 24px;
+        line-height: 105.6%;
+        color: #f5e3cc;
+      }
+      @media (max-width: 400px) {
+        justify-content: center;
+      }
+      & .avatar {
+        width: 153px;
+        height: 153px;
+        background: linear-gradient(#ffc734, #ffe6a1);
+        filter: drop-shadow(0px 0px 36px #b16201af);
+        margin-right: 26px;
+        @media (max-width: 1200px) {
+          width: 100px;
+          height: 100px;
+        }
+        @media (max-width: 1000px) {
+          width: 62px;
+          height: 62px;
+          margin-right: 15px;
+        }
+      }
+      & > img {
+        width: 48px;
+        height: 48px;
+        margin-right: 7px;
+        @media (max-width: 1000px) {
+          width: 24px;
+          height: 24px;
+          margin-right: 5px;
+        }
+      }
+    }
+    &__data {
+      display: flex;
+      gap: 75px;
+      @media (max-width: 1340px) {
+        gap: 5.5vw;
+      }
+      @media (max-width: 1200px) {
+        gap: 4.8vw;
+      }
+      @media (max-width: 1000px) {
+        margin-bottom: 30px;
+      }
+      @media (max-width: 400px) {
+        gap: 9.5vw;
+        margin-bottom: 0;
+      }
+      &-item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        font-weight: 700;
+        @media (max-width: 1000px) {
+          gap: 10px;
+        }
+        &--fails {
+          & .liderbord-header__data-number {
+            color: #ff5f2c;
+          }
+          &::before {
+            width: 22.52px;
+            height: 26.72px;
+            background-image: url(../../assets/img/liderbord/vector-4.svg);
+            @media (max-width: 1000px) {
+              width: 16.23px;
+              height: 19.25px;
+            }
+          }
+        }
+        &--rang {
+          &::before {
+            width: 24.79px;
+            height: 24.56px;
+            background-image: url(../../assets/img/liderbord/vector-1.svg);
+            @media (max-width: 1000px) {
+              width: 18px;
+              height: 17px;
+            }
+          }
+        }
+        &--raiting {
+          &::before {
+            width: 32.39px;
+            height: 24.56px;
+            background-image: url(../../assets/img/liderbord/vector-2.svg);
+            @media (max-width: 1000px) {
+              width: 24px;
+              height: 18px;
+            }
+          }
+        }
+        &--wings {
+          &::before {
+            width: 29.26px;
+            height: 29.26px;
+            background-image: url(../../assets/img/liderbord/vector-3.svg);
+            @media (max-width: 1000px) {
+              width: 21px;
+              height: 21px;
+            }
+          }
+        }
+        &--rang,
+        &--raiting,
+        &--wings,
+        &--fails {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: calc(100% + 12px);
+            background-size: contain;
+            @media (max-width: 1000px) {
+              bottom: calc(100% + 9px);
+            }
+          }
+        }
+      }
+      &-name {
+        font-size: 22px;
+        line-height: 88.6%;
+        color: #ffffff;
+        @media (max-width: 1000px) {
+          font-size: 12px;
+        }
+      }
+      &-number {
+        font-size: 38px;
+        line-height: 88.6%;
+        color: #ffc734;
+        @media (max-width: 1000px) {
+          font-size: 23px;
+        }
+      }
+    }
+  }
+}

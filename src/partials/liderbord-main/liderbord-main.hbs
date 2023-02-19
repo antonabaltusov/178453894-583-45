@@ -1,0 +1,90 @@
+<div class="liderbord-main">
+  <div class="container">
+    <div class="liderbord__dop-info">
+      <p>Узнать правила PvP сезона, механику присвоения<br />
+        рангов можно в статье, посвященной
+        <a target="_blank">этой теме</a></p>
+      <p>Данные по рангам обновляются раз в день</p>
+    </div>
+    <div class="liderbord__nuv">
+      <div class="liderbord__filter">
+        <div class="liga-list">
+          <div class="liga-item active">
+            <img
+              src="../../assets/img/liderbord/liga/league_legend.png"
+              alt=""
+            />
+            Лига легенд
+          </div>
+          <div class="liga-item">
+            <img
+              src="../../assets/img/liderbord/liga/league_bronze.png"
+              alt=""
+            />
+            Бронзовая лига
+          </div>
+          <div class="liga-item">
+            <img
+              src="../../assets/img/liderbord/liga/league_silver.png"
+              alt=""
+            />
+            Серебряная лига
+          </div>
+          <div class="liga-list__bottom">
+          <svg class="liga-list__bg liga-list__bg--left" preserveAspectRatio="none" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 9.1 12" style="enable-background:new 0 0 9.1 12;" xml:space="preserve">
+            <path fill="#F5E3CC" d="M0-266.7V4.9l0.1-0.1L7.4,12h255.1l7.3-7.2l0.1,0.1v-271.5l-0.1,0.1L0-266.7L0-266.7z"/>
+          </svg>
+          <svg class="liga-list__bg liga-list__bg--right" preserveAspectRatio="none" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+            viewBox="0 0 9 12" style="enable-background:new 0 0 9 12;" xml:space="preserve">
+            <path fill="#F5E3CC" d="M-260.9-266.7V4.9l0.1-0.1l7.3,7.2H1.6l7.3-7.2L9,4.9v-271.5l-0.1,0.1L-260.9-266.7L-260.9-266.7z"/>
+          </svg>
+          </div>
+        </div>
+        <svg class="bg bg-left" preserveAspectRatio="none" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+          viewBox="0 0 9.1 48.7" style="enable-background:new 0 0 9.1 48.7;" xml:space="preserve">
+          <path fill="#140E13" stroke="#635C4C" d="M262.5,0.5l7.1,7v33.7l-7.1,7H7.6l-7.1-7V7.5l7.1-7H262.5z"/>
+        </svg>
+        <svg class="bg bg-right" preserveAspectRatio="none" version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+          viewBox="0 0 9.1 48.8" style="enable-background:new 0 0 9.1 48.8;" xml:space="preserve">
+        <path fill="#140E13" stroke="#635C4C" d="M1.4,0.5l7.1,7v33.7l-7.1,7l-254.9,0l-7.1-7V7.5l7.1-7L1.4,0.5z"/>
+        </svg>
+        <div class="liga-item">
+          <img src="../../assets/img/liderbord/liga/league_legend.png" alt="" />
+          Лига легенд
+        </div>
+        <div class="liga-array"></div>
+      </div>
+      <div class="liderbord__search">
+        <div class="input input-balance shot-raund-radius">
+          <div class="shot-raund-radius-border-left">
+            <div class="shot-raund-radius-border-left__bg"></div>
+          </div>
+          <div class="shot-raund-radius-border-right">
+            <div class="shot-raund-radius-border-left__bg"></div>
+          </div>
+          <input
+            type="number"
+            min="500"
+            max="15000"
+            placeholder="Введите ID игрока"
+          />
+          <svg
+            width="17"
+            height="17"
+            viewBox="0 0 17 17"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M15.7459 12.555C15.3153 12.1244 13.9578 11.1221 12.6101 10.3461C12.5955 10.368 12.5809 10.3898 12.5663 10.4142C14.0867 7.96438 13.7875 4.70203 11.6588 2.57336C9.17741 0.094363 5.15604 0.094363 2.67461 2.57336C0.193184 5.05722 0.195617 9.07615 2.67461 11.5576C4.78382 13.6644 8.00238 13.9831 10.4449 12.5088C11.148 13.7301 12.1721 15.163 12.6563 15.6471C13.5077 16.4986 14.8944 16.4961 15.7459 15.6447C16.5974 14.7907 16.5974 13.4089 15.7459 12.555ZM9.98511 9.88383C8.42814 11.4384 5.90779 11.4384 4.35081 9.8814C2.79627 8.32686 2.79384 5.80651 4.35081 4.24954C5.90535 2.69499 8.42814 2.69499 9.98268 4.24954C11.5397 5.80651 11.5397 8.32929 9.98511 9.88383Z"
+              fill="#635C4C"
+            ></path>
+          </svg>
+        </div>
+
+      </div>
+    </div>
+    {{> "liderbord-table/liderbord-table" nuv="true"}}
+  </div>
+</div>

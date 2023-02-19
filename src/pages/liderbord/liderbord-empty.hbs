@@ -1,0 +1,30 @@
+{{!< body }}
+<main class="liderbord">
+  <div
+    class="liderbord-header"
+    style="background-image: url(../../assets/img/liderbord/liderbord-header.png);"
+  >
+    <div class="liderbord-header--common container">
+      <h1>Лидерборд</h1>
+      <div class="liderbord-header__go-auth">
+        <p>Авторизуйтесь, чтобы видеть<br />свои показатели в PvP</p>
+        <button data-popup="sing-in" class="liderbord-btn">
+          <svg
+            width="173"
+            height="37"
+            viewBox="0 0 173 37"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 8.85643V28.2949L0.10605 28.19L8.46562 36.4613H163.64L172 28.19L172.106 28.2949V8.85643L172 8.96136L163.64 0.690002H8.46562L0.10605 8.96136L0 8.85643Z"
+              fill="#FFC734"
+            ></path>
+          </svg>
+          <span>Авторизоваться</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  {{> "liderbord-main/liderbord-main-empty" }}
+</main>

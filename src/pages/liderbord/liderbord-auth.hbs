@@ -1,0 +1,38 @@
+{{!< body }}
+<main class="liderbord">
+  <div
+    class="liderbord-header auth"
+    style="background-image: url(../../assets/img/liderbord/liderbord-header.png);"
+  >
+    <div class="liderbord-header--common container">
+      <h1>Лидерборд</h1>
+    </div>
+    <div class="liderbord-header--auth container">
+      <div class="liderbord-header__name">
+        {{> "avatar/avatar" imgSrc="../../assets/img/liderbord/avatar.png" disabled="true"}}
+        <img src="../../assets/img/liderbord/liga/league_legend.png" alt="">
+        Mellosa
+      </div>
+      <div class="liderbord-header__data">
+        <div class="liderbord-header__data-item liderbord-header__data-item--rang">
+          <div class="liderbord-header__data-name">Ранг</div>
+          <div class="liderbord-header__data-number">132</div>
+        </div>
+        <div class="liderbord-header__data-item liderbord-header__data-item--raiting">
+          <div class="liderbord-header__data-name">Рейтинг</div>
+          <div class="liderbord-header__data-number">12 896</div>
+        </div>
+        <div class="liderbord-header__data-item liderbord-header__data-item--wings">
+          <div class="liderbord-header__data-name">Победы</div>
+          <div class="liderbord-header__data-number green-font">453</div>
+        </div>
+        <div class="liderbord-header__data-item liderbord-header__data-item--fails">
+          <div class="liderbord-header__data-name">Поражения</div>
+          <div class="liderbord-header__data-number">234</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  {{> "liderbord-main/liderbord-main" }}
+</main>

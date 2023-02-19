@@ -29,11 +29,19 @@
   {{else}}
     {{> "link/link" text="Контакты" link="../../pages/contacts/contacts.hbs"}}
   {{/if}}
+  {{#if liderbord }}
+    {{> "link/link" text="Лидерборд" link="../../pages/liderbord/liderbord.hbs" class='active'}}
+  {{else}}
+    {{> "link/link" text="Лидерборд" link="../../pages/liderbord/liderbord.hbs"}}
+  {{/if}}
   <div hidden>
   {{> "link/link" text="lk" link="../../pages/profile/profile-second.hbs"}}
   {{> "link/link" text="lk" link="../../pages/dop/dop.hbs"}}
   {{> "link/link" text="lk" link="../../pages/not-found/not-found.hbs"}}
   {{> "link/link" text="lk" link="../../pages/successful-auth/successful-auth.hbs"}}
+  {{> "link/link" text="lk" link="../../pages/liderbord/liderbord-auth.hbs"}}
+  {{> "link/link" text="lk" link="../../pages/index/index-liderbord.hbs"}}
+  {{> "link/link" text="lk" link="../../pages/liderbord/liderbord-empty.hbs"}}
   </div>
   {{#if auth }}
   <div class="header-nav__notifications">

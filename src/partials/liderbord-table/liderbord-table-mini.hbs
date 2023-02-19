@@ -1,0 +1,41 @@
+<div class="liderbord-table">
+  <div class="liderbord-table__header">
+    <div class="liderbord-table__item">
+      <div class="liderbord-table__item--rang sort"><button
+          class="active up"
+        >Ранг</button></div>
+      <div class="liderbord-table__item--raiting sort"><button
+        >Рейтинг</button></div>
+      <div class="liderbord-table__item--name sort"><button disabled>Имя <span class="only-desktop">пользователя<span></button></div>
+      <div class="liderbord-table__item--plays sort"><button>Победы / Поражения</button></div>
+    </div>
+  </div>
+  <div class="liderbord-table__list">
+      {{> "liderbord-table/liderbord-item" rang="1" raiting="12 896" name="Riddickthekiller" id="198237985" wings="217" fails="345" }}
+      {{> "liderbord-table/liderbord-item" rang="2" raiting="12 896" name="Petkick" id="198237985" wings="217" fails="345" }}
+      {{> "liderbord-table/liderbord-item" rang="3" raiting="12 896" name="Mellosa Morgen" id="198237985" wings="217" fails="345"}}
+      {{> "liderbord-table/liderbord-item" rang="4" raiting="12 896" name="Petkick" id="198237985" wings="217" fails="345" }}
+      {{> "liderbord-table/liderbord-item" rang="5" raiting="12 896" name="Riddickthekiller" id="198237985" wings="217" fails="345" }}
+  </div>
+  {{#if nuv }}
+    <div class="liderbord-table__nuv">
+      <button>
+        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M11.8893 9.87866L0.688049 5.41509L11.8893 0.951523L16.2192 5.41509L11.8893 9.87866Z" fill="#635C4C"/>
+        </svg>
+      </button>
+      <ul>
+        <li>1<span>1</span></li>
+        <li class="active">2<span>2</span></li>
+        <li>3<span>3</span></li>
+        <li>4<span>4</span></li>
+        <li>5<span>5</span></li>
+      </ul>
+      <button>
+        <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5.11074 9.87866L16.312 5.41509L5.11074 0.951523L0.780802 5.41509L5.11074 9.87866Z" fill="#635C4C"/>
+        </svg>
+      </button>
+    </div>
+  {{/if}}
+</div>

@@ -11,6 +11,10 @@ function resize() {
   const w = screen.width;
   if (w > 1920) {
     m.setAttribute("content", "width=1920, user-scalable=0");
+  } else if (w < 500) {
+    m.setAttribute("content", "width=390, user-scalable=0");
+  } else if (w < 768) {
+    m.setAttribute("content", "width=768, user-scalable=0");
   } else {
     m.setAttribute("content", "width=device-width, initial-scale=1.0");
   }

@@ -5,6 +5,9 @@
   align-items: center;
   position: relative;
   z-index: 500;
+  @media (max-width: 1200px) {
+    font-size: 13px;
+  }
   @media (max-width: 1000px) {
     font-size: 12px;
   }
@@ -62,7 +65,10 @@
     margin-left: 3vw;
   }
   & .header-nav {
-    margin: 0 3.4375vw;
+    margin: 0 3vw;
+    @media (max-width: 1000px) {
+      margin: 0 2vw;
+    }
   }
   & .avatar {
     height: 3em;

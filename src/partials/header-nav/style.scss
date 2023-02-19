@@ -4,16 +4,18 @@
     color: #f5e3cc;
     font-size: 1.25em;
     line-height: 103.6%;
-    &:hover, &.active {
-      color: #FFC734;
+    &:hover,
+    &.active {
+      color: #ffc734;
       text-shadow: 0px -2px 11px #000000, 0px 5px 6px #000000;
     }
-    
   }
   & .link:not(:last-child) {
     margin-right: 1.3vw;
+    @media (max-width: 1200px) {
+      margin-right: 0.6vw;
+    }
   }
-  
 
   &__notifications {
     display: none;
@@ -21,5 +23,4 @@
       display: block;
     }
   }
-
 }
