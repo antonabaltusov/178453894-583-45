@@ -8,7 +8,7 @@
     <div class="news-img__right-top"></div>
     <div class="news-img__right-bottom"></div>
   </div>
-  <h2>{{title}}</h2>
+  <h2 {{#if hidetitle}} style="visibility: hidden;" {{/if}}>{{title}}</h2>
   <div class="news-item__date">
     <p class="news-item">{{itemDate}}</p>
   </div>

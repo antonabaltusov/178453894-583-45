@@ -80,7 +80,7 @@
   }
   & .mobile-menu {
     display: none;
-    padding: 0 13px 0 20px;
+    padding: 0 13px 9px 20px;
 
     & .btn-close-menu,
     & .btn-open-menu {
@@ -164,9 +164,9 @@
     }
   }
   @media (max-width: 900px) {
-    height: 100px;
-    padding-top: 17px;
+    height: 105px;
     margin-bottom: -100px;
+    padding-top: 13px;
     & .desktop-menu {
       display: none;
     }
