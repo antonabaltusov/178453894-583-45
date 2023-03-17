@@ -1,0 +1,37 @@
+.input {
+  &__lk{
+    background: #E0D4BC;
+    border-top: 1px solid #635c4c;
+    border-bottom: 1px solid #635c4c;
+    label{
+      width: auto;
+      font-size: 19px;
+      font-weight: 400;
+      border-right: none;
+    }
+    &::before,
+    &::after{
+      background-color: #E0D4BC;
+    }
+    input{
+      padding-left: 20px;
+    }
+  }
+}
+.mt-1{
+  margin-top: 1rem;
+}
+.mb-1{
+  margin-bottom: 1rem;
+}
+.mb-2{
+  margin-bottom: 2rem;
+}
+.mb-3{
+  margin-bottom: 3rem;
+}
+.name-26{
+  font-size: 26px;
+  font-weight: 700;
+  color: #201B16;
+}

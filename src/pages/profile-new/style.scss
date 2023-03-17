@@ -1,0 +1,246 @@
+@media (max-width: 900px) and (min-width: 811px){
+    .profile-new{
+        margin-top: 100px;
+    }
+}
+.profile-new{
+    &-main{
+        display: flex;
+        height: 100%;
+    }
+    .profile-left,
+    .profile-right{
+        position: relative;
+        display: flex;
+        height: 100%;
+    }
+    .profile-left{
+        width: 300px;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 45px;
+        padding-bottom: 45px;
+        &::before{
+            content: "";
+            background: linear-gradient(rgba(0, 0, 0, 0) 50%, black 100%), url(../../assets/img/profile/new-bg.jpg);
+            background: -webkit-linear-gradient(rgba(0, 0, 0, 0) 50%, black 100%), url(../../assets/img/profile/new-bg.jpg);
+            position: absolute;
+            z-index: -1;
+            right: 0;
+            top: 0;
+            height: 100%;
+            width: calc(100vw - 1000px);
+            opacity: 0.13;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            background-position: 50% top;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+        }
+        .avatar{
+            width: 107px;
+            height: 107px;
+            display: block;
+        }
+    }
+    .profile-right{
+        width: calc(100% - 300px);
+        padding-left: 80px;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        &::before{
+            content: "";
+            background-color: #EFE7D8;
+            position: absolute;
+            z-index: -1;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: calc(100vw - 300px);
+        }
+    }
+    &__user,
+    &__avatar{
+        display: inline-flex;
+    }
+    &__user{
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+    .user-info__name{
+        color: #F5E3CC;
+        font-size: 26px;
+        font-weight: 700;
+        margin-top: 12px;
+    }
+    .user-info__id{
+        font-size: 16px;
+        color: #635C4C;
+    }
+    .profile-new__menu,
+    .profile-new__exit{
+        margin-top: 45px;
+        ul{
+            display: flex;
+            flex-flow: column nowrap;
+            width: 170px;
+            a{
+                font-size: 22px;
+                font-weight: 700;
+                color: #8F8160;
+                text-decoration: none;
+                position: relative;
+                display: block;
+                &.active,
+                &:hover{
+                    color: #FFC734;
+                }
+                &.active::after{
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    margin-top: -5px;
+                    left: 100%;
+                    width: 65px;
+                    height: 10px;
+                    background-image: url(../../assets/img/profile/arrow-lk-menu.svg);
+                }
+            }
+            li + li{
+                margin-top: 20px;
+            }
+        }
+    }
+    .promocode-btn{
+        pointer-events: none;
+        width: 213px;
+        height: 59px;
+        background-color: #0000;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+        padding: 0;
+        display: flex;
+        position: relative;
+        pointer-events: all;
+        svg{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        span{
+            text-align: center;
+            color: #000;
+            z-index: 10;
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 88.6%;
+        }
+    }
+    hr{
+        color: #000;
+        opacity: .1;
+    }
+    .profile-right__mini-block{
+        max-width: 530px;
+        font-size: 18px;
+    }
+    .profile-right__block{
+        width: 100%;
+    }
+    .profile-soc__button-item{
+        display: flex;
+        align-items: center;
+        .profile-soc__button-dop{
+            margin-top: 0;
+            margin-left: 25px;
+            text-align: left;
+        }
+        .profile-soc__button-dop{
+            color: #635C4C;
+        }
+    }
+    @media (max-width: 1340px) and (min-width: 901px){
+        .profile-left{
+            width: 350px;
+            &::before{
+                width: calc(100vw - 350px);
+            }
+        }
+        .profile-right{
+            width: calc(100% - 350px);
+        }
+        .profile-new__menu ul a.active::after{
+            margin-left: 25px;
+        }
+        .profile-right{
+            padding-left: 40px;
+        }
+    }
+    @media (max-width: 900px){
+        .profile-left::before{
+            width: 100vw;
+        }
+        .profile-new__exit{
+            display: none;
+        }
+        .profile-left,
+        .profile-right{
+            height: auto;
+            padding: 20px 0px;
+        }
+        .profile-left{
+            text-align: center;
+        }
+        .profile-new__menu ul a.active::after{
+            content: none;
+        }
+        .profile-new__menu ul{
+            flex-flow: nowrap;
+            width: auto;
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            -ms-overflow-style: -ms-autohiding-scrollbar;
+            li + li{
+                margin-top: 0;
+            }
+            a{
+                white-space: nowrap;
+                padding: 0 20px;
+            }
+        }
+        .profile-new-main{
+            display: block;
+            height: auto;
+            .profile-left,
+            .profile-right{
+                width: 100%;
+                display: block;
+            }
+        }
+        .profile-right__mini-block{
+            max-width: 100%;
+        }
+        .profile-right::before{
+            width: 100vw;
+            margin-left: -20px;
+        }
+        
+    }
+}
+.profile-new + footer{
+    margin-top: 0;
+}
+.promo-history{
+    tr td{
+        padding: 10px;
+        font-size: 18px;
+        font-weight: 400;
+        &.date{
+            padding-left: 0;
+            color: #635C4C;
+        }
+    }
+}
