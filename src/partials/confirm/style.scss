@@ -111,3 +111,29 @@
     }
   }
 }
+.popup.popup-promo-success,
+.popup.popup-promo-error,
+.popup.popup-promo-inactive{
+  max-width: 610px;
+}
+.popup-promo-success>.popup-promo-success,
+.popup-promo-error>.popup-promo-error,
+.popup-promo-inactive>.popup-promo-inactive{
+  display: flex;
+  h2{
+    margin-bottom: 28px;
+  }
+  svg{
+    margin-bottom: 18px;
+  }
+  .popup-promo__text{
+    font-size: 22px;
+    font-weight: 400;
+  }
+  .button-yellow{
+    background-color: transparent;
+    width: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
