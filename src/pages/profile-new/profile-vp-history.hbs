@@ -1,0 +1,97 @@
+---
+auth: 'true'
+---
+
+{{!< body }} <main class="profile-new">
+    <div class="container">
+        <div class="profile-new-main">
+            <div class="profile-left">
+                <div class="profile-new__user">
+                    <div class="profile-new__avatar">
+                        {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png" disabled="true"}}
+                    </div>
+                    <p class="user-info__name">Mellosa Morgenstern</p>
+                    <p class="user-info__id">ID 1364622</p>
+                </div>
+                <div class="profile-new__menu">
+                    <ul>
+                        <li>
+                            <a href="#">Уведомления</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-promo.hbs">Промокоды</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-quest.hbs">Квесты</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-balance.hbs">Кошелек</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-vp.hbs" class="active">Vintersaga Points</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-soc.hbs">Привязанные аккаунты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile-new__exit">
+                    <ul>
+                        <li>
+                            <a href="#">Выход</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile-right">
+                <div class="profile-right__block">
+                    <div class="profile-top-menu">
+                        <ul>
+                            <li>
+                                <a href="../profile-new/profile-vp.hbs">
+                                    Баланс
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../profile-new/profile-vp-history.hbs" class="active">
+                                    История операций
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="name-and-tags mt-2">
+                        <div class="name-26">История платежей</div>
+                        <div class="history-balance__nav select-switcher only-desktop">
+                            <button id="all" class="active">Все</button>
+                            <button id="in">Входящие</button>
+                            <button id="out">Исходящие</button>
+                        </div>
+                    </div>
+                    <hr>
+                    <table class="promo-history">
+                        <tr>
+							<td class="date">12.02.22</td>
+                            <td class="summ add"><i class="vp-icon"></i> + 10</td>
+							<td>Vintersaga Points за покупку на сумму 100 руб.</td>
+						</tr>
+                        <tr>
+							<td class="date">12.02.22</td>
+                            <td class="summ remove"><i class="vp-icon"></i> - 100</td>
+							<td>Vintersaga Points полная оплата за товар Плащ полубога</td>
+						</tr>
+                        <tr>
+							<td class="date">12.02.22</td>
+                            <td class="summ add"><i class="vp-icon"></i> + 12</td>
+							<td>Vintersaga Points за покупку на сумму 100 руб.</td>
+						</tr>
+                        <tr>
+							<td class="date">12.02.22</td>
+                            <td class="summ remove"><i class="vp-icon"></i> - 200</td>
+							<td>Vintersaga Points частичная оплата за товар Легендарный шлем болотного воина</td>
+						</tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>

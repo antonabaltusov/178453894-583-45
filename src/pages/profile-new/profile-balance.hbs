@@ -1,0 +1,66 @@
+---
+auth: 'true'
+---
+
+{{!< body }} <main class="profile-new">
+    <div class="container">
+        <div class="profile-new-main">
+            <div class="profile-left">
+                <div class="profile-new__user">
+                    <div class="profile-new__avatar">
+                        {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png" disabled="true"}}
+                    </div>
+                    <p class="user-info__name">Mellosa Morgenstern</p>
+                    <p class="user-info__id">ID 1364622</p>
+                </div>
+                <div class="profile-new__menu">
+                    <ul>
+                        <li>
+                            <a href="#">Уведомления</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-promo.hbs">Промокоды</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-quest.hbs">Квесты</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-balance.hbs" class="active">Кошелек</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-vp.hbs">Vintersaga Points</a>
+                        </li>
+                        <li>
+                            <a href="../profile-new/profile-soc.hbs">Привязанные аккаунты</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="profile-new__exit">
+                    <ul>
+                        <li>
+                            <a href="#">Выход</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="profile-right">
+                <div class="profile-right__block">
+                    <div class="profile-top-menu">
+                        <ul>
+                            <li>
+                                <a href="../profile-new/profile-balance.hbs" class="active">
+                                    Баланс и вывод
+                                </a>
+                            </li>
+                            <li>
+                                <a href="../profile-new/profile-balance-history.hbs">
+                                    История операций
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </main>
