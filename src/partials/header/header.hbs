@@ -10,11 +10,17 @@
     <div class="header-item">
       {{> "language-select/language-select"}}
       {{#if auth }}
-      {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png"}}
-      {{> "money/money" count="9999"}}
-      {{> "notifications/notifications" }}
+        <div class="header-mony polygon-btn">
+          {{#if header-ruble }}
+            <div class="ruble"><span class="val">9999</span></div>
+          {{/if}}
+          <div class="vp"><span class="val">9999</span></div>
+        </div>
+        {{!-- {{> "money/money" count="9999"}} --}}
+        {{> "avatar/avatar" imgSrc="../../assets/img/avatar.png"}}
+        {{> "notifications/notifications" }}
       {{else}}
-      {{> "button-singin/button-singin" text="войти" popup="sing-in"}}
+        {{> "button-singin/button-singin" text="войти" popup="sing-in"}}
       {{/if}}
     </div>
   </div>
