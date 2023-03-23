@@ -16,7 +16,7 @@ auth: 'true'
                 <div class="profile-new__menu">
                     <ul>
                         <li>
-                            <a href="#">Уведомления</a>
+                            <a href="../profile-new/profile.hbs">Уведомления</a>
                         </li>
                         <li>
                             <a href="../profile-new/profile-promo.hbs">Промокоды</a>
@@ -58,6 +58,63 @@ auth: 'true'
                                 </a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="profile-right__mini-block balance">
+                        <div class="balance-block">
+                            <div class="balance-block-left">
+                                <div class="polygon-block mt-1">
+                                    <div class="polygon-block-border-right">
+                                        <div class="vp-balanc-block-text">Баланс: <i class="help-icon"></i></div>
+                                        <div class="vp-balanc-block-val">999 999 <span>₽</span></div>
+                                    </div>
+                                </div>
+                                <div class="balance-bottom-block">
+                                    <div class="name-26">Пополнить</div>
+                                    <div class="mb-2">
+                                        <div class="balance-label">Сумма пополнения</div>
+                                        {{> "input-lk/input-lk" label="0 ₽"}}
+                                        <div class="balance-label">Добавьте метод пополнения</div>
+                                        <a href="#" class="add-cart">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.30871 2.06417C6.30873 1.27719 6.94671 0.639203 7.7337 0.639188C8.52068 0.639173 9.15864 1.27713 9.15862 2.06411L9.15839 14.4137C9.15838 15.2007 8.52039 15.8387 7.73341 15.8387C6.94643 15.8387 6.30847 15.2007 6.30848 14.4138L6.30871 2.06417Z" fill="#936D09"/>
+                                                <path d="M13.908 9.66347C14.695 9.66346 15.333 9.02547 15.333 8.23849C15.333 7.45151 14.6951 6.81355 13.9081 6.81356L1.55847 6.8138C0.771491 6.81381 0.133506 7.4518 0.133491 8.23878C0.133476 9.02576 0.771437 9.66372 1.55842 9.6637L13.908 9.66347Z" fill="#936D09"/>
+                                            </svg>
+                                            Добавить карту
+                                        </a>
+                                        <button class="balance__button polygon-btn">Пополнить</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="balance-block-right">
+                                <div class="polygon-block mt-1">
+                                    <div class="polygon-block-border-right">
+                                        <div class="vp-balanc-block-text">Можно вывести: <i class="help-icon"></i></div>
+                                        <div class="vp-balanc-block-val">999 999 <span>₽</span></div>
+                                    </div>
+                                </div>
+                                <div class="balance-bottom-block">
+                                    <div class="name-26">Вывести</div>
+                                    <div class="mb-2">
+                                        <div class="balance-label">Сумма на вывод</div>
+                                        <div class="ralative">
+                                            {{> "input-lk/input-lk" label="0 ₽"}}
+                                            <div class="balance-commission">
+                                                Итого с комиссией вы получите<br><span class="price">9999 ₽</span>
+                                            </div>
+                                        </div>
+                                        <div class="balance-label">Добавьте метод вывода средств</div>
+                                        <a href="#" class="add-cart">
+                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M6.30871 2.06417C6.30873 1.27719 6.94671 0.639203 7.7337 0.639188C8.52068 0.639173 9.15864 1.27713 9.15862 2.06411L9.15839 14.4137C9.15838 15.2007 8.52039 15.8387 7.73341 15.8387C6.94643 15.8387 6.30847 15.2007 6.30848 14.4138L6.30871 2.06417Z" fill="#936D09"/>
+                                                <path d="M13.908 9.66347C14.695 9.66346 15.333 9.02547 15.333 8.23849C15.333 7.45151 14.6951 6.81355 13.9081 6.81356L1.55847 6.8138C0.771491 6.81381 0.133506 7.4518 0.133491 8.23878C0.133476 9.02576 0.771437 9.66372 1.55842 9.6637L13.908 9.66347Z" fill="#936D09"/>
+                                            </svg>
+                                            Добавить карту
+                                        </a>
+                                        <button class="balance__button polygon-btn">Пополнить</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

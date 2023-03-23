@@ -1,9 +1,10 @@
 .language-select {
-  align-self: flex-start;
-  margin-top: 32px;
+  // align-self: flex-start;
+  // margin-top: 32px;
   position: relative;
   transition: all;
   transition-duration: 0.4s;
+  margin-right: 26px;
   &.active {
     & .language-select-wrapper {
       display: block;

@@ -3,6 +3,7 @@
   visibility: visible;
   width: 19px;
   height: 20px;
+  position: relative;
   & img {
     height: 100%;
     width: 100%;
@@ -19,5 +20,16 @@
     & img.notifications-hover {
       display: block;
     }
+  }
+  &.active::after{
+    content: "";
+    position: absolute;
+    display: block;
+    width: 10px;
+    height: 10px;
+    top: -8px;
+    right: -8px;
+    border-radius: 50%;
+    background-color: #FF7A00;
   }
 }
