@@ -687,9 +687,23 @@
             margin-left: 10px;
             margin-right: 10px;
             align-items: center;
-            display: flex;
+            display: inline-flex;
             i{
                 padding-right: 5px;
+            }
+        }
+        .bottom{
+            display: flex;
+        }
+    }
+    @media (max-width: 900px){
+        .notifications-table .notification{
+            td{
+                display: block;
+                width: 100%;
+            }
+            .bottom{
+                display: block;
             }
         }
     }
