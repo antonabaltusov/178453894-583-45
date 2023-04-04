@@ -499,6 +499,10 @@
         }
         .quest-item{
             position: relative;
+            padding-top: 10px;
+        }
+        .quest-list{
+            padding-top: 0;
         }
         .quest-item__step{
             position: absolute;
@@ -696,7 +700,19 @@
             display: flex;
         }
     }
+    .hidden-desctop{
+        display: none;
+    }
     @media (max-width: 900px){
+        .hidden-desctop{
+            display: block;
+        }
+        .hidden-mobile{
+            display: none;
+        }
+        .quest-item .quest-item__button{
+            margin-bottom: 15px;
+        }
         .notifications-table .notification{
             td{
                 display: block;
@@ -784,15 +800,50 @@
             margin-top: 5px;
         }
         .polygon-block .polygon-block-padding{
-            display: block;
+            display: flex;
             padding: 15px;
+            justify-content: center;
             .vp-balanc-block-right{
                 padding-left: 0;
-                width: 100%;
+                width: auto;
             }
             .vp-balanc-block-right + .vp-balanc-block-right{
                 display: none;
             }
+        }
+        .promo-history tr{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+        .promo-history .summ{
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            flex: 0 0 200px;
+            max-width: 200px;
+            padding-bottom: 0;
+        }
+        .notifications-table .notification.active .date::before{
+            top: 21px;
+            left: 0;
+        }
+        .notifications-table .date{
+            padding-left: 15px;
+            padding-bottom: 0;
+        }
+        .promo-history .date{
+            flex-wrap: nowrap;
+            white-space: nowrap;
+            flex: 0 0 70px;
+            max-width: 70px;
+            padding-bottom: 0;
+        }
+        .promo-history tr td{
+            width: 100% !important;
+            padding-left: 0;
+            padding-top: 0;
         }
         .profile-soc__button-item{
             flex-flow: column nowrap;
@@ -805,6 +856,9 @@
         .profile-soc__button-dop.innactive{
             margin-left: 0;
             width: 100%;
+            br{
+                display: none;
+            }
         }
         .profile-soc__button-dop:not(.innactive){
             button{
